@@ -1,9 +1,10 @@
 class AssessmentsController < ApplicationController
+
   def new
     @assessment = Assessment.new
   end
   def create
-    @assessment = Assessment.new
+    @assessment = Assessment.new(assessment_params)
     @assessment.user = current_user
     @assessment.save!
     @exercise = Exercise.all.sample
@@ -15,5 +16,9 @@ class AssessmentsController < ApplicationController
   end
   def show
     @assessment = Assessment.find(params[:id])
+  end
+
+  private
+  def assessment_params
   end
 end
