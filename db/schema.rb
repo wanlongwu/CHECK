@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20180306035716) do
     t.index ["assessment_id"], name: "index_programs_on_assessment_id"
     t.index ["exercise_id"], name: "index_programs_on_exercise_id"
   end
-
+  
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
