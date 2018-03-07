@@ -9,6 +9,12 @@ let angleResult = 0;
 
 let angleArray = [];
 
+// let photo = null;
+
+let photoUrl = null;
+
+let parsingArray = [];
+
 const a = document.getElementById("myCanvas");
 a.addEventListener("click",(event) => {
   getPosition(event);
@@ -22,12 +28,16 @@ function getPosition(event){
      xy.push([x,y]);
      drawCoordinates(x,y);
      i++;
-     if(i>1){
+     if(i>1&&i<6){
       drawLine(xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
      };
-     if(i>2){
+     if(i>2&&i<6){
       angle(xy[i-3][0],xy[i-3][1],xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
      };
+     if(i==5){
+      photoUrl = img_url();
+      parsingArray.push([angleArray,photoUrl])
+     }
 };
 
 function drawCoordinates(x,y){
@@ -56,4 +66,9 @@ const angle = (x1,y1,x2,y2,x3,y3) => {
                          Math.pow(y3-y1,2)); // p0->p1 (c)
     angleResult = (Math.acos((line23*line23+line12*line12-line13*line13)/(2*line23*line12)))*180/Math.PI;
     angleArray.push(angleResult);
+};
+
+const img_url = () => {
+   return canvas.toDataURL('image/png');
+      // photo.setAttribute('src', data);
 };

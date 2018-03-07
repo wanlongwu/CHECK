@@ -45,6 +45,7 @@ function startWebcam() {
       // drawing in it
       canvas = document.getElementById("myCanvas");
       ctx = canvas.getContext('2d');
+      // photo = document.getElementById('photo');
     };
 
     function hideVideo(){
