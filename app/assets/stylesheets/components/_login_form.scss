@@ -13,6 +13,12 @@ h2 {
   }
   .btn {
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    color: white;
+    background-color: $check-lightteal;
+  }
+
+  .btn:hover {
+    background-color: $check-teal;
   }
 }
