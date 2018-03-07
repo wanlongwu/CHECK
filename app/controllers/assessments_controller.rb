@@ -1,10 +1,12 @@
 class AssessmentsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create,:show]
+
   def new
     @assessment = Assessment.new
   end
   def create
     @assessment = Assessment.new
-    @assessment.user = current_user
+    @assessment.user = current_or_guest_user
     @assessment.save!
     @exercise = Exercise.all.sample
     @program  = Program.new

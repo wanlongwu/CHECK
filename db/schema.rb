@@ -30,12 +30,6 @@ ActiveRecord::Schema.define(version: 20180307020502) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "flats", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "programs", force: :cascade do |t|
     t.bigint "assessment_id"
     t.bigint "exercise_id"
