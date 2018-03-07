@@ -1,1 +1,12 @@
-// Specific CSS for your home-page
+h1 {
+  color: $check-darkblue;
+  font-size: 75px;
+}
+
+#banner {
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
