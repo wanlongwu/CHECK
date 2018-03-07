@@ -4,9 +4,12 @@ h1 {
 }
 
 #banner {
+  background-image: url(image-path("checkhome.jpg"));
   height: 100vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
 }
