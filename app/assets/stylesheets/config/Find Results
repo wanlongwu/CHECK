@@ -1,0 +1,943 @@
+Searching 155 files for "body"
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/yarn.lock:
+  854    resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
+  855
+  856: body-parser@1.18.2:
+  857    version "1.18.2"
+  858:   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.18.2.tgz#87678a19d84b47d859b83199bd59bce222b10454"
+  859    dependencies:
+  860      bytes "3.0.0"
+  ...
+  866      on-finished "~2.3.0"
+  867      qs "6.5.1"
+  868:     raw-body "2.3.2"
+  869      type-is "~1.6.15"
+  870
+  ...
+ 2016      accepts "~1.3.4"
+ 2017      array-flatten "1.1.1"
+ 2018:     body-parser "1.18.2"
+ 2019      content-disposition "0.5.2"
+ 2020      content-type "~1.0.4"
+ ....
+ 4643    resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
+ 4644
+ 4645: raw-body@2.3.2:
+ 4646    version "2.3.2"
+ 4647:   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.3.2.tgz#bcd60c77d3eb93cde0050295c3f379389bc88f89"
+ 4648    dependencies:
+ 4649      bytes "3.0.0"
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/app/assets/stylesheets/config/_bootstrap_variables.scss:
+    5
+    6  // General style
+    7: $font-family-sans-serif:  $body-font;
+    8  $headings-font-family:    $headers-font;
+    9: $body-bg:                 $check-lightteal;
+   10  $font-size-base: 18px;
+   11
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/app/assets/stylesheets/config/_fonts.scss:
+    1  // Import Google fonts
+    2  @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Lato:300,400,700');
+    3: // Define fonts for body and headers
+    4: $body-font: "Lato", "Helvetica", "sans-serif";
+    5  $headers-font: "Karla", "Helvetica", "sans-serif";
+    6
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/app/views/layouts/application.html.erb:
+   10      <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+   11    </head>
+   12:   <body>
+   13      <p class="notice"><%= notice %></p>
+   14      <p class="alert"><%= alert %></p>
+   ..
+   18      <%= javascript_include_tag 'application' %>
+   19      <%= javascript_pack_tag 'application' %>
+   20:   </body>
+   21  </html>
+   22
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/app/views/layouts/mailer.html.erb:
+    8    </head>
+    9
+   10:   <body>
+   11      <%= yield %>
+   12:   </body>
+   13  </html>
+   14
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/app/views/pages/home.html.erb:
+    1
+    2: <body>
+    3    <div id="banner">
+    4      <h1>CHECK</h1>
+    5      <p>correct your posture</p>
+    6    </div>
+    7: </body>
+    8
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/404.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/404.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/422.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/422.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/500.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/500.html -->
+   59    <div class="dialog">
+   ..
+   63      <p>If you are the application owner check the logs for more information.</p>
+   64    </div>
+   65: </body>
+   66  </html>
+   67
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/assets/application-37326c0221bd430986ff47ef84e772da209a29a6c54d6c174300ae7163a3c00e.js:
+  485          form.innerHTML = formContent;
+  486          form.style.display = 'none';
+  487:         document.body.appendChild(form);
+  488          form.querySelector('[type="submit"]').click();
+  489          return stopEverything(e);
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/assets/application-d0990e348570f050f730358d0d65cfb543decd635475b5fe754881c3212f144e.css:
+   15
+   16  /* line 19, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_normalize.scss */
+   17: body {
+   18    margin: 0;
+   19  }
+   ..
+ 1714
+ 1715  /* line 27, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
+ 1716: body {
+ 1717    font-family: "Open Sans", "Helvetica", "sans-serif";
+ 1718    font-size: 18px;
+ ....
+ 3486  .table > thead > tr > th,
+ 3487  .table > thead > tr > td,
+ 3488: .table > tbody > tr > th,
+ 3489: .table > tbody > tr > td,
+ 3490  .table > tfoot > tr > th,
+ 3491  .table > tfoot > tr > td {
+ ....
+ 3510  }
+ 3511  /* line 57, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3512: .table > tbody + tbody {
+ 3513    border-top: 2px solid #ddd;
+ 3514  }
+ ....
+ 3521  .table-condensed > thead > tr > th,
+ 3522  .table-condensed > thead > tr > td,
+ 3523: .table-condensed > tbody > tr > th,
+ 3524: .table-condensed > tbody > tr > td,
+ 3525  .table-condensed > tfoot > tr > th,
+ 3526  .table-condensed > tfoot > tr > td {
+ ....
+ 3535  .table-bordered > thead > tr > th,
+ 3536  .table-bordered > thead > tr > td,
+ 3537: .table-bordered > tbody > tr > th,
+ 3538: .table-bordered > tbody > tr > td,
+ 3539  .table-bordered > tfoot > tr > th,
+ 3540  .table-bordered > tfoot > tr > td {
+ ....
+ 3548
+ 3549  /* line 114, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3550: .table-striped > tbody > tr:nth-of-type(odd) {
+ 3551    background-color: #f9f9f9;
+ 3552  }
+ 3553
+ 3554  /* line 125, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3555: .table-hover > tbody > tr:hover {
+ 3556    background-color: #f5f5f5;
+ 3557  }
+ ....
+ 3575  .table > thead > tr > td.active,
+ 3576  .table > thead > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th,
+ 3577: .table > tbody > tr > td.active,
+ 3578: .table > tbody > tr > th.active,
+ 3579: .table > tbody > tr.active > td,
+ 3580: .table > tbody > tr.active > th,
+ 3581  .table > tfoot > tr > td.active,
+ 3582  .table > tfoot > tr > th.active,
+ ....
+ 3587
+ 3588  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3589: .table-hover > tbody > tr > td.active:hover,
+ 3590: .table-hover > tbody > tr > th.active:hover, .table-hover > tbody > tr.active:hover > td, .table-hover > tbody > tr:hover > .active, .table-hover > tbody > tr.active:hover > th {
+ 3591    background-color: #e8e8e8;
+ 3592  }
+ ....
+ 3595  .table > thead > tr > td.success,
+ 3596  .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th,
+ 3597: .table > tbody > tr > td.success,
+ 3598: .table > tbody > tr > th.success,
+ 3599: .table > tbody > tr.success > td,
+ 3600: .table > tbody > tr.success > th,
+ 3601  .table > tfoot > tr > td.success,
+ 3602  .table > tfoot > tr > th.success,
+ ....
+ 3607
+ 3608  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3609: .table-hover > tbody > tr > td.success:hover,
+ 3610: .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
+ 3611    background-color: #d0e9c6;
+ 3612  }
+ ....
+ 3615  .table > thead > tr > td.info,
+ 3616  .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th,
+ 3617: .table > tbody > tr > td.info,
+ 3618: .table > tbody > tr > th.info,
+ 3619: .table > tbody > tr.info > td,
+ 3620: .table > tbody > tr.info > th,
+ 3621  .table > tfoot > tr > td.info,
+ 3622  .table > tfoot > tr > th.info,
+ ....
+ 3627
+ 3628  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3629: .table-hover > tbody > tr > td.info:hover,
+ 3630: .table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr:hover > .info, .table-hover > tbody > tr.info:hover > th {
+ 3631    background-color: #c4e3f3;
+ 3632  }
+ ....
+ 3635  .table > thead > tr > td.warning,
+ 3636  .table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th,
+ 3637: .table > tbody > tr > td.warning,
+ 3638: .table > tbody > tr > th.warning,
+ 3639: .table > tbody > tr.warning > td,
+ 3640: .table > tbody > tr.warning > th,
+ 3641  .table > tfoot > tr > td.warning,
+ 3642  .table > tfoot > tr > th.warning,
+ ....
+ 3647
+ 3648  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3649: .table-hover > tbody > tr > td.warning:hover,
+ 3650: .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr:hover > .warning, .table-hover > tbody > tr.warning:hover > th {
+ 3651    background-color: #faf2cc;
+ 3652  }
+ ....
+ 3655  .table > thead > tr > td.danger,
+ 3656  .table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th,
+ 3657: .table > tbody > tr > td.danger,
+ 3658: .table > tbody > tr > th.danger,
+ 3659: .table > tbody > tr.danger > td,
+ 3660: .table > tbody > tr.danger > th,
+ 3661  .table > tfoot > tr > td.danger,
+ 3662  .table > tfoot > tr > th.danger,
+ ....
+ 3667
+ 3668  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3669: .table-hover > tbody > tr > td.danger:hover,
+ 3670: .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr:hover > .danger, .table-hover > tbody > tr.danger:hover > th {
+ 3671    background-color: #ebcccc;
+ 3672  }
+ ....
+ 3693    .table-responsive > .table > thead > tr > th,
+ 3694    .table-responsive > .table > thead > tr > td,
+ 3695:   .table-responsive > .table > tbody > tr > th,
+ 3696:   .table-responsive > .table > tbody > tr > td,
+ 3697    .table-responsive > .table > tfoot > tr > th,
+ 3698    .table-responsive > .table > tfoot > tr > td {
+ ....
+ 3706    .table-responsive > .table-bordered > thead > tr > th:first-child,
+ 3707    .table-responsive > .table-bordered > thead > tr > td:first-child,
+ 3708:   .table-responsive > .table-bordered > tbody > tr > th:first-child,
+ 3709:   .table-responsive > .table-bordered > tbody > tr > td:first-child,
+ 3710    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+ 3711    .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+ ....
+ 3715    .table-responsive > .table-bordered > thead > tr > th:last-child,
+ 3716    .table-responsive > .table-bordered > thead > tr > td:last-child,
+ 3717:   .table-responsive > .table-bordered > tbody > tr > th:last-child,
+ 3718:   .table-responsive > .table-bordered > tbody > tr > td:last-child,
+ 3719    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+ 3720    .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+ ....
+ 3722    }
+ 3723    /* line 225, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3724:   .table-responsive > .table-bordered > tbody > tr:last-child > th,
+ 3725:   .table-responsive > .table-bordered > tbody > tr:last-child > td,
+ 3726    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+ 3727    .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+ ....
+ 4802
+ 4803  /* line 28, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_component-animations.scss */
+ 4804: tbody.collapse.in {
+ 4805    display: table-row-group;
+ 4806  }
+ ....
+ 6818  /* line 10, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_media.scss */
+ 6819  .media,
+ 6820: .media-body {
+ 6821    zoom: 1;
+ 6822    overflow: hidden;
+ ....
+ 6824
+ 6825  /* line 16, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_media.scss */
+ 6826: .media-body {
+ 6827    width: 10000px;
+ 6828  }
+ ....
+ 6852  .media-left,
+ 6853  .media-right,
+ 6854: .media-body {
+ 6855    display: table-cell;
+ 6856    vertical-align: top;
+ ....
+ 7121
+ 7122  /* line 16, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7123: .panel-body {
+ 7124    padding: 15px;
+ 7125  }
+ 7126  /* line 14, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+ 7127: .panel-body:before, .panel-body:after {
+ 7128    content: " ";
+ 7129    display: table;
+ 7130  }
+ 7131  /* line 19, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+ 7132: .panel-body:after {
+ 7133    clear: both;
+ 7134  }
+ ....
+ 7233  /* line 127, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7234  .panel > .table:first-child > thead:first-child > tr:first-child,
+ 7235: .panel > .table:first-child > tbody:first-child > tr:first-child,
+ 7236  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
+ 7237: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+ 7238    border-top-left-radius: 1px;
+ 7239    border-top-right-radius: 1px;
+ ....
+ 7242  .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+ 7243  .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+ 7244: .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+ 7245: .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+ 7246  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+ 7247  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+ 7248: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+ 7249: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+ 7250    border-top-left-radius: 1px;
+ 7251  }
+ ....
+ 7253  .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+ 7254  .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+ 7255: .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+ 7256: .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+ 7257  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+ 7258  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+ 7259: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+ 7260: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+ 7261    border-top-right-radius: 1px;
+ 7262  }
+ ....
+ 7268  }
+ 7269  /* line 149, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7270: .panel > .table:last-child > tbody:last-child > tr:last-child,
+ 7271  .panel > .table:last-child > tfoot:last-child > tr:last-child,
+ 7272: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+ 7273  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+ 7274    border-bottom-left-radius: 1px;
+ ....
+ 7276  }
+ 7277  /* line 153, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7278: .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+ 7279: .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+ 7280  .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+ 7281  .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+ 7282: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+ 7283: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+ 7284  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+ 7285  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+ ....
+ 7287  }
+ 7288  /* line 157, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7289: .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+ 7290: .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+ 7291  .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+ 7292  .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+ 7293: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+ 7294: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+ 7295  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+ 7296  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+ ....
+ 7298  }
+ 7299  /* line 164, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7300: .panel > .panel-body + .table,
+ 7301: .panel > .panel-body + .table-responsive,
+ 7302: .panel > .table + .panel-body,
+ 7303: .panel > .table-responsive + .panel-body {
+ 7304    border-top: 1px solid #ddd;
+ 7305  }
+ 7306  /* line 170, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7307: .panel > .table > tbody:first-child > tr:first-child th,
+ 7308: .panel > .table > tbody:first-child > tr:first-child td {
+ 7309    border-top: 0;
+ 7310  }
+ ....
+ 7317  .panel > .table-bordered > thead > tr > th:first-child,
+ 7318  .panel > .table-bordered > thead > tr > td:first-child,
+ 7319: .panel > .table-bordered > tbody > tr > th:first-child,
+ 7320: .panel > .table-bordered > tbody > tr > td:first-child,
+ 7321  .panel > .table-bordered > tfoot > tr > th:first-child,
+ 7322  .panel > .table-bordered > tfoot > tr > td:first-child,
+ 7323  .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+ 7324  .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+ 7325: .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+ 7326: .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+ 7327  .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+ 7328  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+ ....
+ 7332  .panel > .table-bordered > thead > tr > th:last-child,
+ 7333  .panel > .table-bordered > thead > tr > td:last-child,
+ 7334: .panel > .table-bordered > tbody > tr > th:last-child,
+ 7335: .panel > .table-bordered > tbody > tr > td:last-child,
+ 7336  .panel > .table-bordered > tfoot > tr > th:last-child,
+ 7337  .panel > .table-bordered > tfoot > tr > td:last-child,
+ 7338  .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+ 7339  .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+ 7340: .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+ 7341: .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+ 7342  .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+ 7343  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+ ....
+ 7347  .panel > .table-bordered > thead > tr:first-child > td,
+ 7348  .panel > .table-bordered > thead > tr:first-child > th,
+ 7349: .panel > .table-bordered > tbody > tr:first-child > td,
+ 7350: .panel > .table-bordered > tbody > tr:first-child > th,
+ 7351  .panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
+ 7352  .panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
+ 7353: .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+ 7354: .panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+ 7355    border-bottom: 0;
+ 7356  }
+ 7357  /* line 203, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7358: .panel > .table-bordered > tbody > tr:last-child > td,
+ 7359: .panel > .table-bordered > tbody > tr:last-child > th,
+ 7360  .panel > .table-bordered > tfoot > tr:last-child > td,
+ 7361  .panel > .table-bordered > tfoot > tr:last-child > th,
+ 7362: .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+ 7363: .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+ 7364  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+ 7365  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+ ....
+ 7390  }
+ 7391  /* line 238, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7392: .panel-group .panel-heading + .panel-collapse > .panel-body,
+ 7393  .panel-group .panel-heading + .panel-collapse > .list-group {
+ 7394    border-top: 1px solid #ddd;
+ ....
+ 7399  }
+ 7400  /* line 246, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7401: .panel-group .panel-footer + .panel-collapse .panel-body {
+ 7402    border-bottom: 1px solid #ddd;
+ 7403  }
+ ....
+ 7414  }
+ 7415  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7416: .panel-default > .panel-heading + .panel-collapse > .panel-body {
+ 7417    border-top-color: #ddd;
+ 7418  }
+ ....
+ 7423  }
+ 7424  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7425: .panel-default > .panel-footer + .panel-collapse > .panel-body {
+ 7426    border-bottom-color: #ddd;
+ 7427  }
+ ....
+ 7438  }
+ 7439  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7440: .panel-primary > .panel-heading + .panel-collapse > .panel-body {
+ 7441    border-top-color: #469AE0;
+ 7442  }
+ ....
+ 7447  }
+ 7448  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7449: .panel-primary > .panel-footer + .panel-collapse > .panel-body {
+ 7450    border-bottom-color: #469AE0;
+ 7451  }
+ ....
+ 7462  }
+ 7463  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7464: .panel-success > .panel-heading + .panel-collapse > .panel-body {
+ 7465    border-top-color: #d6e9c6;
+ 7466  }
+ ....
+ 7471  }
+ 7472  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7473: .panel-success > .panel-footer + .panel-collapse > .panel-body {
+ 7474    border-bottom-color: #d6e9c6;
+ 7475  }
+ ....
+ 7486  }
+ 7487  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7488: .panel-info > .panel-heading + .panel-collapse > .panel-body {
+ 7489    border-top-color: #bce8f1;
+ 7490  }
+ ....
+ 7495  }
+ 7496  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7497: .panel-info > .panel-footer + .panel-collapse > .panel-body {
+ 7498    border-bottom-color: #bce8f1;
+ 7499  }
+ ....
+ 7510  }
+ 7511  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7512: .panel-warning > .panel-heading + .panel-collapse > .panel-body {
+ 7513    border-top-color: #faebcc;
+ 7514  }
+ ....
+ 7519  }
+ 7520  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7521: .panel-warning > .panel-footer + .panel-collapse > .panel-body {
+ 7522    border-bottom-color: #faebcc;
+ 7523  }
+ ....
+ 7534  }
+ 7535  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7536: .panel-danger > .panel-heading + .panel-collapse > .panel-body {
+ 7537    border-top-color: #ebccd1;
+ 7538  }
+ ....
+ 7543  }
+ 7544  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7545: .panel-danger > .panel-footer + .panel-collapse > .panel-body {
+ 7546    border-bottom-color: #ebccd1;
+ 7547  }
+ ....
+ 7742
+ 7743  /* line 97, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_modals.scss */
+ 7744: .modal-body {
+ 7745    position: relative;
+ 7746    padding: 15px;
+
+/Users/hessaalkhalifa/code/Hessa2/CHECK/public/assets/application-e00cffae5ab1bd8af575e36bc5d5533aafd4c7f374014f57aa013886a237736c.css:
+   15
+   16  /* line 19, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_normalize.scss */
+   17: body {
+   18    margin: 0;
+   19  }
+   ..
+ 1714
+ 1715  /* line 27, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
+ 1716: body {
+ 1717    font-family: "Open Sans", "Helvetica", "sans-serif";
+ 1718    font-size: 18px;
+ ....
+ 3486  .table > thead > tr > th,
+ 3487  .table > thead > tr > td,
+ 3488: .table > tbody > tr > th,
+ 3489: .table > tbody > tr > td,
+ 3490  .table > tfoot > tr > th,
+ 3491  .table > tfoot > tr > td {
+ ....
+ 3510  }
+ 3511  /* line 57, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3512: .table > tbody + tbody {
+ 3513    border-top: 2px solid #ddd;
+ 3514  }
+ ....
+ 3521  .table-condensed > thead > tr > th,
+ 3522  .table-condensed > thead > tr > td,
+ 3523: .table-condensed > tbody > tr > th,
+ 3524: .table-condensed > tbody > tr > td,
+ 3525  .table-condensed > tfoot > tr > th,
+ 3526  .table-condensed > tfoot > tr > td {
+ ....
+ 3535  .table-bordered > thead > tr > th,
+ 3536  .table-bordered > thead > tr > td,
+ 3537: .table-bordered > tbody > tr > th,
+ 3538: .table-bordered > tbody > tr > td,
+ 3539  .table-bordered > tfoot > tr > th,
+ 3540  .table-bordered > tfoot > tr > td {
+ ....
+ 3548
+ 3549  /* line 114, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3550: .table-striped > tbody > tr:nth-of-type(odd) {
+ 3551    background-color: #f9f9f9;
+ 3552  }
+ 3553
+ 3554  /* line 125, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3555: .table-hover > tbody > tr:hover {
+ 3556    background-color: #f5f5f5;
+ 3557  }
+ ....
+ 3575  .table > thead > tr > td.active,
+ 3576  .table > thead > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th,
+ 3577: .table > tbody > tr > td.active,
+ 3578: .table > tbody > tr > th.active,
+ 3579: .table > tbody > tr.active > td,
+ 3580: .table > tbody > tr.active > th,
+ 3581  .table > tfoot > tr > td.active,
+ 3582  .table > tfoot > tr > th.active,
+ ....
+ 3587
+ 3588  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3589: .table-hover > tbody > tr > td.active:hover,
+ 3590: .table-hover > tbody > tr > th.active:hover, .table-hover > tbody > tr.active:hover > td, .table-hover > tbody > tr:hover > .active, .table-hover > tbody > tr.active:hover > th {
+ 3591    background-color: #e8e8e8;
+ 3592  }
+ ....
+ 3595  .table > thead > tr > td.success,
+ 3596  .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th,
+ 3597: .table > tbody > tr > td.success,
+ 3598: .table > tbody > tr > th.success,
+ 3599: .table > tbody > tr.success > td,
+ 3600: .table > tbody > tr.success > th,
+ 3601  .table > tfoot > tr > td.success,
+ 3602  .table > tfoot > tr > th.success,
+ ....
+ 3607
+ 3608  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3609: .table-hover > tbody > tr > td.success:hover,
+ 3610: .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr:hover > .success, .table-hover > tbody > tr.success:hover > th {
+ 3611    background-color: #d0e9c6;
+ 3612  }
+ ....
+ 3615  .table > thead > tr > td.info,
+ 3616  .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th,
+ 3617: .table > tbody > tr > td.info,
+ 3618: .table > tbody > tr > th.info,
+ 3619: .table > tbody > tr.info > td,
+ 3620: .table > tbody > tr.info > th,
+ 3621  .table > tfoot > tr > td.info,
+ 3622  .table > tfoot > tr > th.info,
+ ....
+ 3627
+ 3628  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3629: .table-hover > tbody > tr > td.info:hover,
+ 3630: .table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr:hover > .info, .table-hover > tbody > tr.info:hover > th {
+ 3631    background-color: #c4e3f3;
+ 3632  }
+ ....
+ 3635  .table > thead > tr > td.warning,
+ 3636  .table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th,
+ 3637: .table > tbody > tr > td.warning,
+ 3638: .table > tbody > tr > th.warning,
+ 3639: .table > tbody > tr.warning > td,
+ 3640: .table > tbody > tr.warning > th,
+ 3641  .table > tfoot > tr > td.warning,
+ 3642  .table > tfoot > tr > th.warning,
+ ....
+ 3647
+ 3648  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3649: .table-hover > tbody > tr > td.warning:hover,
+ 3650: .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr:hover > .warning, .table-hover > tbody > tr.warning:hover > th {
+ 3651    background-color: #faf2cc;
+ 3652  }
+ ....
+ 3655  .table > thead > tr > td.danger,
+ 3656  .table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th,
+ 3657: .table > tbody > tr > td.danger,
+ 3658: .table > tbody > tr > th.danger,
+ 3659: .table > tbody > tr.danger > td,
+ 3660: .table > tbody > tr.danger > th,
+ 3661  .table > tfoot > tr > td.danger,
+ 3662  .table > tfoot > tr > th.danger,
+ ....
+ 3667
+ 3668  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_table-row.scss */
+ 3669: .table-hover > tbody > tr > td.danger:hover,
+ 3670: .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr:hover > .danger, .table-hover > tbody > tr.danger:hover > th {
+ 3671    background-color: #ebcccc;
+ 3672  }
+ ....
+ 3693    .table-responsive > .table > thead > tr > th,
+ 3694    .table-responsive > .table > thead > tr > td,
+ 3695:   .table-responsive > .table > tbody > tr > th,
+ 3696:   .table-responsive > .table > tbody > tr > td,
+ 3697    .table-responsive > .table > tfoot > tr > th,
+ 3698    .table-responsive > .table > tfoot > tr > td {
+ ....
+ 3706    .table-responsive > .table-bordered > thead > tr > th:first-child,
+ 3707    .table-responsive > .table-bordered > thead > tr > td:first-child,
+ 3708:   .table-responsive > .table-bordered > tbody > tr > th:first-child,
+ 3709:   .table-responsive > .table-bordered > tbody > tr > td:first-child,
+ 3710    .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+ 3711    .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+ ....
+ 3715    .table-responsive > .table-bordered > thead > tr > th:last-child,
+ 3716    .table-responsive > .table-bordered > thead > tr > td:last-child,
+ 3717:   .table-responsive > .table-bordered > tbody > tr > th:last-child,
+ 3718:   .table-responsive > .table-bordered > tbody > tr > td:last-child,
+ 3719    .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+ 3720    .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+ ....
+ 3722    }
+ 3723    /* line 225, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tables.scss */
+ 3724:   .table-responsive > .table-bordered > tbody > tr:last-child > th,
+ 3725:   .table-responsive > .table-bordered > tbody > tr:last-child > td,
+ 3726    .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+ 3727    .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+ ....
+ 4802
+ 4803  /* line 28, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_component-animations.scss */
+ 4804: tbody.collapse.in {
+ 4805    display: table-row-group;
+ 4806  }
+ ....
+ 6818  /* line 10, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_media.scss */
+ 6819  .media,
+ 6820: .media-body {
+ 6821    zoom: 1;
+ 6822    overflow: hidden;
+ ....
+ 6824
+ 6825  /* line 16, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_media.scss */
+ 6826: .media-body {
+ 6827    width: 10000px;
+ 6828  }
+ ....
+ 6852  .media-left,
+ 6853  .media-right,
+ 6854: .media-body {
+ 6855    display: table-cell;
+ 6856    vertical-align: top;
+ ....
+ 7121
+ 7122  /* line 16, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7123: .panel-body {
+ 7124    padding: 15px;
+ 7125  }
+ 7126  /* line 14, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+ 7127: .panel-body:before, .panel-body:after {
+ 7128    content: " ";
+ 7129    display: table;
+ 7130  }
+ 7131  /* line 19, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+ 7132: .panel-body:after {
+ 7133    clear: both;
+ 7134  }
+ ....
+ 7233  /* line 127, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7234  .panel > .table:first-child > thead:first-child > tr:first-child,
+ 7235: .panel > .table:first-child > tbody:first-child > tr:first-child,
+ 7236  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
+ 7237: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+ 7238    border-top-left-radius: 1px;
+ 7239    border-top-right-radius: 1px;
+ ....
+ 7242  .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+ 7243  .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+ 7244: .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+ 7245: .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+ 7246  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+ 7247  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+ 7248: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+ 7249: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+ 7250    border-top-left-radius: 1px;
+ 7251  }
+ ....
+ 7253  .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+ 7254  .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+ 7255: .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+ 7256: .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+ 7257  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+ 7258  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+ 7259: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+ 7260: .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+ 7261    border-top-right-radius: 1px;
+ 7262  }
+ ....
+ 7268  }
+ 7269  /* line 149, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7270: .panel > .table:last-child > tbody:last-child > tr:last-child,
+ 7271  .panel > .table:last-child > tfoot:last-child > tr:last-child,
+ 7272: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+ 7273  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+ 7274    border-bottom-left-radius: 1px;
+ ....
+ 7276  }
+ 7277  /* line 153, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7278: .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+ 7279: .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+ 7280  .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+ 7281  .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+ 7282: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+ 7283: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+ 7284  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+ 7285  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+ ....
+ 7287  }
+ 7288  /* line 157, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7289: .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+ 7290: .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+ 7291  .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+ 7292  .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+ 7293: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+ 7294: .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+ 7295  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+ 7296  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+ ....
+ 7298  }
+ 7299  /* line 164, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7300: .panel > .panel-body + .table,
+ 7301: .panel > .panel-body + .table-responsive,
+ 7302: .panel > .table + .panel-body,
+ 7303: .panel > .table-responsive + .panel-body {
+ 7304    border-top: 1px solid #ddd;
+ 7305  }
+ 7306  /* line 170, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7307: .panel > .table > tbody:first-child > tr:first-child th,
+ 7308: .panel > .table > tbody:first-child > tr:first-child td {
+ 7309    border-top: 0;
+ 7310  }
+ ....
+ 7317  .panel > .table-bordered > thead > tr > th:first-child,
+ 7318  .panel > .table-bordered > thead > tr > td:first-child,
+ 7319: .panel > .table-bordered > tbody > tr > th:first-child,
+ 7320: .panel > .table-bordered > tbody > tr > td:first-child,
+ 7321  .panel > .table-bordered > tfoot > tr > th:first-child,
+ 7322  .panel > .table-bordered > tfoot > tr > td:first-child,
+ 7323  .panel > .table-responsive > .table-bordered > thead > tr > th:first-child,
+ 7324  .panel > .table-responsive > .table-bordered > thead > tr > td:first-child,
+ 7325: .panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+ 7326: .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+ 7327  .panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+ 7328  .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+ ....
+ 7332  .panel > .table-bordered > thead > tr > th:last-child,
+ 7333  .panel > .table-bordered > thead > tr > td:last-child,
+ 7334: .panel > .table-bordered > tbody > tr > th:last-child,
+ 7335: .panel > .table-bordered > tbody > tr > td:last-child,
+ 7336  .panel > .table-bordered > tfoot > tr > th:last-child,
+ 7337  .panel > .table-bordered > tfoot > tr > td:last-child,
+ 7338  .panel > .table-responsive > .table-bordered > thead > tr > th:last-child,
+ 7339  .panel > .table-responsive > .table-bordered > thead > tr > td:last-child,
+ 7340: .panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+ 7341: .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+ 7342  .panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+ 7343  .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+ ....
+ 7347  .panel > .table-bordered > thead > tr:first-child > td,
+ 7348  .panel > .table-bordered > thead > tr:first-child > th,
+ 7349: .panel > .table-bordered > tbody > tr:first-child > td,
+ 7350: .panel > .table-bordered > tbody > tr:first-child > th,
+ 7351  .panel > .table-responsive > .table-bordered > thead > tr:first-child > td,
+ 7352  .panel > .table-responsive > .table-bordered > thead > tr:first-child > th,
+ 7353: .panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+ 7354: .panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+ 7355    border-bottom: 0;
+ 7356  }
+ 7357  /* line 203, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7358: .panel > .table-bordered > tbody > tr:last-child > td,
+ 7359: .panel > .table-bordered > tbody > tr:last-child > th,
+ 7360  .panel > .table-bordered > tfoot > tr:last-child > td,
+ 7361  .panel > .table-bordered > tfoot > tr:last-child > th,
+ 7362: .panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+ 7363: .panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+ 7364  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+ 7365  .panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+ ....
+ 7390  }
+ 7391  /* line 238, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7392: .panel-group .panel-heading + .panel-collapse > .panel-body,
+ 7393  .panel-group .panel-heading + .panel-collapse > .list-group {
+ 7394    border-top: 1px solid #ddd;
+ ....
+ 7399  }
+ 7400  /* line 246, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_panels.scss */
+ 7401: .panel-group .panel-footer + .panel-collapse .panel-body {
+ 7402    border-bottom: 1px solid #ddd;
+ 7403  }
+ ....
+ 7414  }
+ 7415  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7416: .panel-default > .panel-heading + .panel-collapse > .panel-body {
+ 7417    border-top-color: #ddd;
+ 7418  }
+ ....
+ 7423  }
+ 7424  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7425: .panel-default > .panel-footer + .panel-collapse > .panel-body {
+ 7426    border-bottom-color: #ddd;
+ 7427  }
+ ....
+ 7438  }
+ 7439  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7440: .panel-primary > .panel-heading + .panel-collapse > .panel-body {
+ 7441    border-top-color: #469AE0;
+ 7442  }
+ ....
+ 7447  }
+ 7448  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7449: .panel-primary > .panel-footer + .panel-collapse > .panel-body {
+ 7450    border-bottom-color: #469AE0;
+ 7451  }
+ ....
+ 7462  }
+ 7463  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7464: .panel-success > .panel-heading + .panel-collapse > .panel-body {
+ 7465    border-top-color: #d6e9c6;
+ 7466  }
+ ....
+ 7471  }
+ 7472  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7473: .panel-success > .panel-footer + .panel-collapse > .panel-body {
+ 7474    border-bottom-color: #d6e9c6;
+ 7475  }
+ ....
+ 7486  }
+ 7487  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7488: .panel-info > .panel-heading + .panel-collapse > .panel-body {
+ 7489    border-top-color: #bce8f1;
+ 7490  }
+ ....
+ 7495  }
+ 7496  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7497: .panel-info > .panel-footer + .panel-collapse > .panel-body {
+ 7498    border-bottom-color: #bce8f1;
+ 7499  }
+ ....
+ 7510  }
+ 7511  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7512: .panel-warning > .panel-heading + .panel-collapse > .panel-body {
+ 7513    border-top-color: #faebcc;
+ 7514  }
+ ....
+ 7519  }
+ 7520  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7521: .panel-warning > .panel-footer + .panel-collapse > .panel-body {
+ 7522    border-bottom-color: #faebcc;
+ 7523  }
+ ....
+ 7534  }
+ 7535  /* line 11, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7536: .panel-danger > .panel-heading + .panel-collapse > .panel-body {
+ 7537    border-top-color: #ebccd1;
+ 7538  }
+ ....
+ 7543  }
+ 7544  /* line 20, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_panels.scss */
+ 7545: .panel-danger > .panel-footer + .panel-collapse > .panel-body {
+ 7546    border-bottom-color: #ebccd1;
+ 7547  }
+ ....
+ 7742
+ 7743  /* line 97, /Users/hessaalkhalifa/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_modals.scss */
+ 7744: .modal-body {
+ 7745    position: relative;
+ 7746    padding: 15px;
+
+285 matches across 12 files
