@@ -5,10 +5,9 @@ class AssessmentsController < ApplicationController
     @assessment = Assessment.new
   end
   def create
-    change_img_params(assessment_params[:"photo"])
     @assessment = Assessment.new(assessment_params)
-    # @photo =
     @assessment.user = current_or_guest_user
+    @assessment.photo = change_img_params(assessment_params[:"photo"])
     @assessment.save!
     @exercise = Exercise.all.sample
     @program  = Program.new
@@ -18,7 +17,20 @@ class AssessmentsController < ApplicationController
     redirect_to assessment_path(@assessment)
   end
   def show
+    @neck_result = ""
+    @hip_result = ""
+    @knee_result = ""
+
     @assessment = Assessment.find(params[:id])
+    if (@assessment.angle1 - 180).abs > 5
+      @neck_result = "Neck!"
+    end
+    if (@assessment.angle2 - 180).abs > 5
+      @hip_result = "Hip!"
+    end
+    if (@assessment.angle3 - 180).abs > 5
+      @knee_result = "Knee!"
+    end
   end
 
   private
