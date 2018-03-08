@@ -1,5 +1,9 @@
 class AssessmentsController < ApplicationController
-  respond_to :html, :js
+
+
+
+  skip_before_action :authenticate_user!, only: [:new, :create,:show]
+
 
   def new
     @assessment = Assessment.new
@@ -9,8 +13,10 @@ class AssessmentsController < ApplicationController
     end
   end
   def create
+
     @assessment = Assessment.new(assessment_params)
-    @assessment.user = current_user
+    @assessment.user = current_or_guest_user
+
     @assessment.save!
     @exercise = Exercise.all.sample
     @program  = Program.new
