@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'omniauth-facebook', '~> 4.0.0'
+gem 'cloudinary'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
