@@ -1,22 +1,12 @@
 class AssessmentsController < ApplicationController
-
-
-
   skip_before_action :authenticate_user!, only: [:new, :create,:show]
-
 
   def new
     @assessment = Assessment.new
-    respond_to do |format|
-      format.html
-      format.json
-    end
   end
   def create
-
     @assessment = Assessment.new(assessment_params)
     @assessment.user = current_or_guest_user
-
     @assessment.save!
     @exercise = Exercise.all.sample
     @program  = Program.new
@@ -32,6 +22,6 @@ class AssessmentsController < ApplicationController
   private
 
   def assessment_params
-    params.require(:assessment).permit(:angle1,:angle2,:angle3,:image)
+    params.require(:assessment).permit(:angle1,:angle2,:angle3,:photo)
   end
 end

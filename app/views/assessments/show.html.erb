@@ -1,3 +1,5 @@
 <h1>this is the assessment show page with exercises</h1>
 
-<%= link_to "sign up", new_user_session_path %>
+your exercise is <%= @assessment.programs.first.exercise %>
+
+<%= link_to "sign up for more", new_user_session_path %>

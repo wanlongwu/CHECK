@@ -1,5 +1,5 @@
 class Assessment < ApplicationRecord
-  mount_uploader :image, PhotoUploader
+  mount_uploader :photo, PhotoUploader
   belongs_to :user
   has_many :programs
 end
