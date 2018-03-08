@@ -28,15 +28,20 @@ function getPosition(event){
      xy.push([x,y]);
      drawCoordinates(x,y);
      i++;
-     if(i>1&&i<6){
+     if (i>=6) {
+      return;
+     }
+     if(i>1){
       drawLine(xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
      };
-     if(i>2&&i<6){
-      angle(xy[i-3][0],xy[i-3][1],xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
+     if(i>2){
+      const angle = getAngle(xy[i-3][0],xy[i-3][1],xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
+      storeAngle(angle, i);
      };
      if(i==5){
-      photoUrl = img_url();
-      parsingArray.push([angleArray,photoUrl])
+      photoUrl = getImageData();
+      // parsingArray.push([angleArray,photoUrl])
+      storePhoto(photoUrl)
      }
 };
 
@@ -57,7 +62,7 @@ const drawLine = (x1,y1,x2,y2) => {
     ctx.stroke();
 };
 
-const angle = (x1,y1,x2,y2,x3,y3) => {
+const getAngle = (x1,y1,x2,y2,x3,y3) => {
     var line12 = Math.sqrt(Math.pow(x2-x1,2)+
                         Math.pow(y2-y1,2)); // p0->c (b)
     var line23 = Math.sqrt(Math.pow(x2-x3,2)+
@@ -65,10 +70,34 @@ const angle = (x1,y1,x2,y2,x3,y3) => {
     var line13 = Math.sqrt(Math.pow(x3-x1,2)+
                          Math.pow(y3-y1,2)); // p0->p1 (c)
     angleResult = (Math.acos((line23*line23+line12*line12-line13*line13)/(2*line23*line12)))*180/Math.PI;
-    angleArray.push(angleResult);
+    // angleArray.push(angleResult);
+    return angleResult
+    // storeAngle()
 };
 
-const img_url = () => {
+const storeAngle = (angle, i) => {
+  const angleFormInput = document.getElementById(`assessment_angle${i-2}`)
+  angleFormInput.value = angle;
+};
+
+const storePhoto = photo => {
+  const photoFormInput = document.getElementById('assessment_image')
+  photoFormInput.value = photo;
+};
+
+const getImageData = () => {
    return canvas.toDataURL('image/png');
       // photo.setAttribute('src', data);
 };
+
+const assessmentForm = document.querySelector("#new_assessment");
+
+const prepareFormData = e => {
+  console.log("hello");
+  assessmentForm.submit();
+};
+
+// const submitBtn = document.querySelector(" query #new_assessment > input.btn");
+assessmentForm.addEventListener("submit", prepareFormData, false)
+
+

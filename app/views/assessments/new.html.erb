@@ -15,6 +15,12 @@
     <img id="photo" alt="The screen capture will appear in this box.">
   </div> -->
 
- <%= simple_form_for @assessment do |f| %>
+ <%= simple_form_for @assessment, remote: true do |f| %>
+ <%= f.input :angle1, as: :hidden %>
+ <%= f.input :angle2, as: :hidden %>
+ <%= f.input :angle3, as: :hidden %>
+ <%= f.input :image, as: :hidden %>
  <%= f.button "submit", class: "btn btn-primary" %>
  <% end %>
+
+

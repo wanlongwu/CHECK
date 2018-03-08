@@ -1,6 +1,12 @@
 class AssessmentsController < ApplicationController
+  respond_to :html, :js
+
   def new
     @assessment = Assessment.new
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
   def create
     @assessment = Assessment.new(assessment_params)
