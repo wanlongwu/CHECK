@@ -1,13 +1,26 @@
-<h1>this is the assessment show page with exercises</h1>
 
-your exercise is <%= @assessment.programs.first.exercise.name %>
 
+<h3 class="text-center">Result</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="photo col-sm-4">
+      <%= image_tag @assessment.photo.url %>
+    </div>
+    <div class="suggestion col-sm-4">
+      Your shoulder angle is:
+      <%= @assessment.angle1.to_i %> degree <p>
+      Your hip angle is: <%= @assessment.angle2.to_i %> degree
+      <p> Your knee angle is: <%= @assessment.angle3.to_i %> degree
+      <p>
+    Here is the exercises that we suggest:
+    <% @programs.each do |program| %>
+      <%= program.exercise.name %>
+    <% end %>
+    </div>
+  </div>
+</div>
 <p>
 
-<%= @assessment.angle1 %> <%= @assessment.angle2 %> <%= @assessment.angle3 %>
 
-<%= image_tag @assessment.photo.url %>
-
-<%= @neck_result %>
-
-<%= link_to "sign up", new_user_registration_path %>
+<%= link_to "sign up for more!", new_user_registration_path %>
