@@ -1,0 +1,22 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 350px 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  height: calc(100vh - 70px);
+  padding: 30px;
+}
+
+.profile .main {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+}
+
+
+
