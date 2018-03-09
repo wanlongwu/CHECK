@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'faker'
 
-# User.all.destroy
-
 default_password = "123456"
 
 default_age = [1..10]
