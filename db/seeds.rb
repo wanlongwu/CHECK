@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+# require 'faker'
 
-User.destroy.all
+# User.all.destroy
 
 default_password = "123456"
 
@@ -22,11 +22,54 @@ default_age = [1..10]
   )
 end
 
-10.times do
-  Exercise.create(
+  Exercise.create({
+    name:"FIX Forward Head Posture! (Daily Corrective Routine)
+",
+    content:"https://www.youtube.com/watch?v=wQylqaCl8Zo",
+    catergory:"neck"
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:"neck"
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:"neck"
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:"neck"
+  },
+  {
     name:Faker::Superhero.power,
     content:Faker::OnePiece.akuma_no_mi,
     catergory:Faker::Dog.breed
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:Faker::Dog.breed
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:Faker::Dog.breed
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:Faker::Dog.breed
+  },
+  {
+    name:Faker::Superhero.power,
+    content:Faker::OnePiece.akuma_no_mi,
+    catergory:Faker::Dog.breed
+  },
+
+
   )
 end
 
