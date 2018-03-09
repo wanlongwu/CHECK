@@ -5,32 +5,32 @@ class AssessmentsController < ApplicationController
     @assessment = Assessment.new
   end
   def create
+    exercise_array = []
     @assessment = Assessment.new(assessment_params)
     @assessment.user = current_or_guest_user
     @assessment.photo = change_img_params(assessment_params[:"photo"])
     @assessment.save!
-    @exercise = Exercise.all.sample
-    @program  = Program.new
-    @program.assessment = @assessment
-    @program.exercise = @exercise
-    @program.save!
+    if (@assessment.angle1 - 180).abs > 5
+      exercise_array += Exercise.where(catergory:"neck")
+    end
+    if (@assessment.angle2 - 180).abs > 5
+      exercise_array += Exercise.where(catergory:"back")
+    end
+    exercise_array.uniq.each do |e|
+      @program = Program.new
+      @program.assessment = @assessment
+      @program.exercise = e
+      @program.save!
+    end
     redirect_to assessment_path(@assessment)
   end
+
   def show
     @neck_result = ""
     @hip_result = ""
     @knee_result = ""
-
     @assessment = Assessment.find(params[:id])
-    if (@assessment.angle1 - 180).abs > 5
-      @neck_result = "Neck!"
-    end
-    if (@assessment.angle2 - 180).abs > 5
-      @hip_result = "Hip!"
-    end
-    if (@assessment.angle3 - 180).abs > 5
-      @knee_result = "Knee!"
-    end
+    @programs = @assessment.programs[0..2]
   end
 
   private
