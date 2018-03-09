@@ -1,3 +1,13 @@
 <h1>this is the assessment show page with exercises</h1>
 
-<%= link_to "sign up", new_user_session_path %>
+your exercise is <%= @assessment.programs.first.exercise.name %>
+
+<p>
+
+<%= @assessment.angle1 %> <%= @assessment.angle2 %> <%= @assessment.angle3 %>
+
+<%= image_tag @assessment.photo.url %>
+
+<%= @neck_result %>
+
+<%= link_to "sign up", new_user_registration_path %>

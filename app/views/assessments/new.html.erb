@@ -1,26 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+    <body onload="init();">
+        <h5>Welcome to Check Posture Cam</h5>
+        <h6>press "start" to begin</h6>
+         <p>
+        <button id="button1" onclick="startWebcam();">Start</button>
+         <button id="button2" onclick="snapshot(); hideVideo();">Take Snapshot</button>
+        <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
+        </p>
 
-<body onload="init();">
-    <h5>Welcome to Posture Cam</h5>
-    <h6>press "start" to begin</h6>
-     <p>
-    <button id="button1" onclick="startWebcam();">Start</button>
-     <button id="button2" onclick="snapshot(); hideVideo();">Take Snapshot</button>
-    <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
-    </p>
+        <video width=800 height=600 id="video" autoplay></video>
+          <canvas  id="myCanvas" width="800" height="600"></canvas>
 
-    <video width=800 height=600 id="video" autoplay></video>
-      <canvas  id="myCanvas" width="800" height="600"></canvas>
+      <!-- <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box.">
+      </div> -->
 
-  <!-- <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
-  </div> -->
-
- <%= simple_form_for @assessment, remote: true do |f| %>
- <%= f.input :angle1, as: :hidden %>
- <%= f.input :angle2, as: :hidden %>
- <%= f.input :angle3, as: :hidden %>
- <%= f.input :image, as: :hidden %>
- <%= f.button "submit", class: "btn btn-primary" %>
- <% end %>
+      <%= simple_form_for @assessment, remote: true do |f| %>
+       <%= f.input :angle1, as: :hidden %>
+       <%= f.input :angle2, as: :hidden %>
+       <%= f.input :angle3, as: :hidden %>
+       <%= f.input :photo %>
+       <%= f.input :photo_cache, as: :hidden %>
+       <%= f.button "submit", class: "btn btn-primary" %>
+       <% end %>
+     </div>
+  </div>
+</div>
 
 
