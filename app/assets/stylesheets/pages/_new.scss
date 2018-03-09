@@ -1,0 +1,21 @@
+h2 {
+  text-align: center;
+  color:$check-teal;
+  text-size: bold;
+}
+
+h4 {
+  text-align: center;
+  color:$check-darkblue;
+}
+
+#button1 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    background-color: $check-lightteal;
+  }
+
+#button1:hover {
+    background-color: $check-teal;
+  }

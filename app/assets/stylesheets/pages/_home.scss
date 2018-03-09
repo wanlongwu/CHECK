@@ -3,6 +3,11 @@ h1 {
   font-size: 75px;
 }
 
+h2 {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
 #banner {
   background-image: url(image-path("checkhome.jpg"));
   height: 100vh;
@@ -14,3 +19,13 @@ h1 {
   background-attachment: fixed;
 }
 
+.btn {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    background-color: $check-lightteal;
+  }
+
+  .btn:hover {
+    background-color: $check-teal;
+  }
