@@ -1,15 +1,61 @@
-h1 {
-  color: $check-darkblue;
-  font-size: 75px;
-}
-
-#banner {
-  background-image: url(image-path("checkhome.jpg"));
+.banner {
+  background-image: url(image-path("finalcheck.jpg"));
+  color: white;
+  text-align: center;
   height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  background-attachment: fixed;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100;
+}
+
+
+.banner h1 {
+  font-size: 70px;
+  font-weight: bolder;
+  color: white;
+  // opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.banner p {
+  font-size: 40px;
+  font-weight: lighter;
+  color: white;
+  // opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+
+.btn-medium {
+  color: white;
+  font-size: 18px;
+  border: 1px solid white;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-weight: medium;
+  // opacity: 0.6;
+  border: 1px solid #4FECBD;
+  background: #4FECBD;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  border-radius: 40px;
+
+}
+
+
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+
