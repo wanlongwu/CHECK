@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-User.destroy.all
+User.destroy_all
 
 default_password = "123456"
 
