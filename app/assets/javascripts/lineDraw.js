@@ -81,7 +81,7 @@ const storeAngle = (angle, i) => {
 };
 
 const storePhoto = photo => {
-  const photoFormInput = document.getElementById('assessment_image')
+  const photoFormInput = document.getElementById('assessment_photo')
   photoFormInput.value = photo;
 };
 
