@@ -7,20 +7,26 @@
     <div class="photo col-sm-4">
       <%= image_tag @assessment.photo.url %>
     </div>
-    <div class="suggestion col-sm-4">
+    <div class="suggestion col-sm-6">
       Your shoulder angle is:
       <%= @assessment.angle1.to_i %> degree <p>
       Your hip angle is: <%= @assessment.angle2.to_i %> degree
       <p> Your knee angle is: <%= @assessment.angle3.to_i %> degree
       <p>
-    Here is the exercises that we suggest:
-    <% @programs.each do |program| %>
-      <%= program.exercise.name %>
-    <% end %>
+      Here is the exercises that we suggest:
+      <div class="assessment-video">
+        <% @programs.each do |program| %>
+          <iframe width="176.4" height="132.3"
+          src= <%= program.exercise.content %> >
+          </iframe>
+        <% end %>
+      </div>
+    </div>
     </div>
   </div>
 </div>
 <p>
 
-
-<%= link_to "sign up for more!", new_user_registration_path %>
+<div class="assessment-submit">
+  <%= link_to "Sign up for more!", new_user_registration_path, :class => "btn btn-primary" %>
+</div>

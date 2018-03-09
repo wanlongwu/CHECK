@@ -27,42 +27,42 @@ end
 
   Exercise.create([{
     name:"FIX Forward Head Posture! (Daily Corrective Routine)",
-    content:"https://www.youtube.com/watch?v=wQylqaCl8Zo",
+    content:"https://www.youtube.com/embed/wQylqaCl8Zo",
     catergory:"neck"
   },
   {
     name:"4 stretches that get rid of neck pain and give you better posture",
-    content:"https://www.youtube.com/watch?v=NaShux69R1w",
+    content:"https://www.youtube.com/embed/NaShux69R1w",
     catergory:"neck"
   },
   {
     name:"Corrective Exercise Forward Head Posture",
-    content:"https://www.youtube.com/watch?v=JA3O0NVb-sk",
+    content:"https://www.youtube.com/embed/JA3O0NVb-sk",
     catergory:"neck"
   },
   {
     name:"how to Get Rid of a Neck Hump",
-    content:"https://www.youtube.com/watch?v=0OkB0xO_9kU",
+    content:"https://www.youtube.com/embed/0OkB0xO_9kU",
     catergory:"neck"
   },
   {
     name: "5 Exercises To Fix Hunchback Posture",
-    content:"https://www.youtube.com/watch?v=wr1ONXcq3yM",
+    content:"https://www.youtube.com/embed/wr1ONXcq3yM",
     catergory:"back"
   },
   {
     name:"Improve Your Posture | 3 Exercises Only!",
-    content:"https://www.youtube.com/watch?v=CqTtScFQ5-c",
+    content:"https://www.youtube.com/embed/CqTtScFQ5-c",
     catergory:"back"
   },
   {
     name:"How To Fix Uneven Hips",
-    content:"https://www.youtube.com/watch?v=lhbhay5_M-0",
+    content:"https://www.youtube.com/embed/lhbhay5_M-0",
     catergory:"back"
   },
   {
    name:"Exercise to Fix Posture and Open Your Hips",
-    content:"https://www.youtube.com/watch?v=4LZ5Bv8ZV9s",
+    content:"https://www.youtube.com/embed/4LZ5Bv8ZV9s",
     catergory:"back"
   },
   ])
