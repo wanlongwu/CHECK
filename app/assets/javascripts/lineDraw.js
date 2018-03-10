@@ -93,7 +93,7 @@ const getImageData = () => {
 const assessmentForm = document.querySelector("#new_assessment");
 
 const prepareFormData = e => {
-  console.log("hello");
+  // console.log("hello");
   assessmentForm.submit();
 };
 
