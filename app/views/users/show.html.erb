@@ -1,6 +1,22 @@
  <%= javascript_include_tag "notification" %>
 
-<button onclick="notifyMe()">Notify me!</button>
+<h4>Posture Buddy -- Your personal posture reminder</h4>
+
+<p></p>
+
+<div class="form-group">
+  <label for="pb-time">How often do you want to be reminded (in minutes)</label>
+  <select class="form-control" id="pb-time-select">
+    <option>15</option>
+    <option>30</option>
+    <option>45</option>
+    <option>60</option>
+  </select>
+  <button onclick="notifyMe()" class="form-control">Start</button>
+</div>
+
+
+
 
 
 <div class="container">

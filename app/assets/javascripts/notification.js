@@ -5,27 +5,33 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   if (!Notification) {
-    alert('Desktop notifications not available in your browser. Try Chromium.');
+    alert('Your browser does not support Posture Buddy function. :(');
     return;
   }
 
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
 });
 
-function notifyMe() {
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
-  else {
-    var notification = new Notification('Notification title', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-      body: "Hey there! You've been notified!",
-    });
+const setTimer = () => {
 
-    notification.onclick = function () {
-      window.open("http://stackoverflow.com/a/13328397/1269037");
-    };
-
-  }
-
+  const time = document.getElementById("pb-time-select").value
+  return (time * 60000)
 }
+
+  function notifyMe() {
+    if (Notification.permission !== "granted")
+      Notification.requestPermission();
+    else {
+      const newNotification = () => {
+        var notification = new Notification('Posture Buddy', {
+        icon: 'http://res.cloudinary.com/db9cynf8x/image/upload/v1520649172/logo.png',
+        body: "Please sit up, you can do it",
+        });
+        setTimeout(notification.close.bind(notification),30000)
+      };
+      setInterval(newNotification, setTimer());
+      // notification.onclick = function () {
+      //   window.open("http://stackoverflow.com/a/13328397/1269037");
+      // };
+    };
+  };
+
