@@ -1,5 +1,5 @@
 class AssessmentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create,:show]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show]
 
   def new
     @assessment = Assessment.new

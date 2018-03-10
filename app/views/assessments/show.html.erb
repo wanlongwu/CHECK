@@ -27,6 +27,10 @@
 </div>
 <p>
 
-<div class="assessment-submit">
+<!-- <div class="assessment-submit">
   <%= link_to "Sign up for more!", new_user_registration_path, :class => "btn btn-primary" %>
+</div> -->
+
+<div class="assessment-submit">
+  <%= link_to "Sign up for Posture Buddy!", user_path(@assessment.user), :class => "btn btn-primary" %>
 </div>
