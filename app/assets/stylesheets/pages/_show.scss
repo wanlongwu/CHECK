@@ -17,3 +17,35 @@ body > div.container > div > div.photo.col-sm-4 > img {
   margin-top: 10%;
 }
 
+.green {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+  background-color: $check-lightteal;
+}
+
+.btn:hover {
+  background-color: $check-teal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.show {
+  display: inline;
+}
+
+
