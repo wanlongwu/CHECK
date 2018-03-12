@@ -11,10 +11,10 @@ class AssessmentsController < ApplicationController
     @assessment.photo = change_img_params(assessment_params[:"photo"])
     @assessment.save!
     if (@assessment.angle1 - 180).abs > 5
-      exercise_array += Exercise.where(catergory:"neck")
+      exercise_array += Exercise.where(category:"neck")
     end
     if (@assessment.angle2 - 180).abs > 5
-      exercise_array += Exercise.where(catergory:"back")
+      exercise_array += Exercise.where(category:"back")
     end
     exercise_array.uniq.each do |e|
       @program = Program.new
