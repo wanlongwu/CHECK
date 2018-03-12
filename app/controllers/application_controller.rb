@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
   protect_from_forgery :except => :receive_guest
 
   before_action :authenticate_user!
@@ -14,6 +13,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
 
+  def after_sign_in_path_for(resource)
+    logging_in
+    user_path(current_user)
+  end
   # if user is logged in, return current_user, else return guest_user
   def current_or_guest_user
     if current_user
@@ -48,13 +51,17 @@ class ApplicationController < ActionController::Base
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
   def logging_in
-
     # For example:
     # guest_comments = guest_user.comments.all
     # guest_comments.each do |comment|
       # comment.user_id = current_user.id
       # comment.save!
     # end
+    guest_assessments = guest_user.assessments.all
+    guest_assessments.each do |assessment|
+      assessment.user_id = current_user.id
+      assessment.save!
+    end
   end
 
   def create_guest_user
@@ -62,10 +69,6 @@ class ApplicationController < ActionController::Base
     u.save!(:validate => false)
     session[:guest_user_id] = u.id
     u
-  end
-
-  def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || user_path(current_user)
   end
 
 end
