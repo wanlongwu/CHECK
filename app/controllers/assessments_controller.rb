@@ -22,6 +22,9 @@ class AssessmentsController < ApplicationController
       @program.exercise = e
       @program.save!
     end
+    unless current_user
+      session[:guest_user_id] = guest_user.id
+    end
     redirect_to assessment_path(@assessment)
   end
 

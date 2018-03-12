@@ -54,7 +54,6 @@ class ApplicationController < ActionController::Base
       # comment.save!
     # end
     guest_assessments = guest_user.assessments.all
-    raise
     guest_assessments.each do |assessment|
       assessment.user_id = current_user.id
       assessment.save!
