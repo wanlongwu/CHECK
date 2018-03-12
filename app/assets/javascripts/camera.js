@@ -48,13 +48,27 @@ function startWebcam() {
     };
 
     function hideVideo(){
+      console.log("hello from hideVideo")
       setTimeout(function(){
         const v = document.getElementById('video');
         const b = document.getElementById('button1');
         v.parentNode.removeChild(v);
         b.parentNode.removeChild(b);
-      },6000);
+      },5000);
     };
+
+    function countdown(){
+        let time = 5;
+        const intervalMethod = setInterval(function(){
+        const countdownSpace = document.getElementById('countdown');
+        countdownSpace.innerHTML = time;
+        time--;
+        if(time < 0){
+          clearInterval(intervalMethod);
+          countdownSpace.innerHTML = "";
+        }
+        },1000);
+      };
 
     function snapshot() {
       setTimeout(function(){

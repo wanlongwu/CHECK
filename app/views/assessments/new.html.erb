@@ -5,9 +5,11 @@
     <h5>The snap shot will take a photo afetr 5 seconds. At the time, step back a few steps, and face the side look straight as you stand stand normally. </h5>
     <h5>When you're ready take a snapshot</h5>
     <div class="col-xs-6 col-sm-2 col-sm-offset-2">
-    <body onload="init(); startWebcam();">
+    <body onload="init(); startWebcam(); ">
     <h6>Press "start" to begin</h6>
-    <button id="button1" onclick="snapshot(); hideVideo();">Take Snapshot</button>
+    <button id="button1" onclick="snapshot(); hideVideo(); countdown(); ">Take Snapshot</button>
+
+    <div class="countdown" id="countdown"></div>
     <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
     <video width=800 height=600 id="video" autoplay></video>
     <canvas  id="myCanvas" width="800" height="600"></canvas>
