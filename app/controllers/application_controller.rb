@@ -47,7 +47,6 @@ class ApplicationController < ActionController::Base
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
   def logging_in
-    raise
     # For example:
     # guest_comments = guest_user.comments.all
     # guest_comments.each do |comment|
