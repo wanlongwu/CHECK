@@ -27,8 +27,13 @@
 </div>
 <p>
 
+<% if user_signed_in? %>
 
-  <%= link_to "Profile page", user_path(params[:id]), :class => "btn btn-primary" %>
+  <%= link_to "Profile page", user_path(current_user), :class => "btn btn-primary" %>
 
+<% else %>
+  <%= link_to "Create an account to do more stuff", new_user_registration_path %>
+
+<% end %>
 
 

@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
 
+  def after_sign_in_path_for(resource)
+    user_path(current_user)
+  end
   # if user is logged in, return current_user, else return guest_user
   def current_or_guest_user
     if current_user
@@ -65,10 +68,6 @@ class ApplicationController < ActionController::Base
     u.save!(:validate => false)
     session[:guest_user_id] = u.id
     u
-  end
-
-  def after_sign_in_path_for(resource_or_scope)
-    request.env['omniauth.origin'] || stored_location_for(resource_or_scope) || signed_in_root_path(resource_or_scope)
   end
 
 end
