@@ -11,7 +11,7 @@
     <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
     <video width=800 height=600 id="video" autoplay></video>
     <canvas  id="myCanvas" width="800" height="600"></canvas>
-      <%= simple_form_for @assessment, remote: true do |f| %>
+      <%= simple_form_for @assessment do |f| %>
        <%= f.input :angle1, as: :hidden %>
        <%= f.input :angle2, as: :hidden %>
        <%= f.input :angle3, as: :hidden %>
