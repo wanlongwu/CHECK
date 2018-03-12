@@ -1,5 +1,5 @@
 class AssessmentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create,:show]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show]
 
   def new
     @assessment = Assessment.new
@@ -11,16 +11,19 @@ class AssessmentsController < ApplicationController
     @assessment.photo = change_img_params(assessment_params[:"photo"])
     @assessment.save!
     if (@assessment.angle1 - 180).abs > 5
-      exercise_array += Exercise.where(catergory:"neck")
+      exercise_array += Exercise.where(category:"neck")
     end
     if (@assessment.angle2 - 180).abs > 5
-      exercise_array += Exercise.where(catergory:"back")
+      exercise_array += Exercise.where(category:"back")
     end
     exercise_array.uniq.each do |e|
       @program = Program.new
       @program.assessment = @assessment
       @program.exercise = e
       @program.save!
+    end
+    unless current_user
+      session[:guest_user_id] = guest_user.id
     end
     redirect_to assessment_path(@assessment)
   end

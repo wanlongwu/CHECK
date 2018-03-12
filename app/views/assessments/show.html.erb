@@ -27,6 +27,13 @@
 </div>
 <p>
 
-<div class="assessment-submit">
-  <%= link_to "Sign up for more!", new_user_registration_path, :class => "btn btn-primary" %>
-</div>
+<% if user_signed_in? %>
+
+  <%= link_to "Profile page", user_path(current_user), :class => "btn btn-primary" %>
+
+<% else %>
+  <%= link_to "Create an account to do more stuff", new_user_registration_path %>
+
+<% end %>
+
+
