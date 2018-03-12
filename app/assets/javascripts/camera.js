@@ -11,7 +11,6 @@ var webcamStream;
 function startWebcam() {
   if (navigator.getUserMedia) {
     navigator.getUserMedia (
-
         // constraints
     {
        video: true,
