@@ -5,51 +5,52 @@
 <div class="show-container">
       <div class="show-profile text-center">
         <div class="show-main">
-          <div class="show-main-content">
-            <%= image_tag @assessment.photo.url, :size => "300x200" %>
-          </div>
+          <%= image_tag @assessment.photo.url %>
         </div>
         <div class="stat">
           <div class="stat-content">
-            Your shoulder angle is:
+            Shoulder angle:
             <% if (175..180).include?(@assessment.angle1) %>
               <div class="green"> <%= @assessment.angle1.to_i %> </div>
             <% elsif (170..175).include?(@assessment.angle1) %>
               <div class="orange"><%= @assessment.angle1.to_i %> </div>
             <% else %>
               <div class="red"><%= @assessment.angle1.to_i %> </div>
-            <% end %> degree
+            <% end %>
+            <p class="showp">Optimal: 180</p>
           </div>
         </div>
         <div class="stat">
           <div class="stat-content">
-            Your hip angle is:
+            Hip angle:
             <% if (175..180).include?(@assessment.angle2) %>
               <div class="green"> <%= @assessment.angle2.to_i %> </div>
             <% elsif (170..175).include?(@assessment.angle2) %>
               <div class="orange"><%= @assessment.angle2.to_i %> </div>
             <% else %>
               <div class="red"><%= @assessment.angle2.to_i %> </div>
-            <% end %> degree
+            <% end %>
+            <p class="showp">Optimal angle=180</p>
             </div>
           </div>
         <div class="stat">
           <div class="stat-content">
-            Your knee angle is:
+            Knee angle:
             <% if (175..180).include?(@assessment.angle3) %>
               <div class="green"> <%= @assessment.angle3.to_i %> </div>
             <% elsif (170..175).include?(@assessment.angle3) %>
               <div class="orange"><%= @assessment.angle3.to_i %> </div>
             <% else %>
               <div class="red"><%= @assessment.angle3.to_i %> </div>
-            <% end %> degree
+            <% end %>
+            <p class="showp">Optimal angle=180</p>
           </div>
         </div>
         <div class="description">
           <div class="description-content">
-            <h3>Sign up for Postureit</h3>
+            <h3>Sign up for PostureIt</h3>
             <p class="text-justify">
-              Text about Postureit
+              PostureIt is your posture buddy at your office or anywhere you're sitting now and reading this. PostureIt will remind to sit up straight .
             </p>
             <% if user_signed_in? %>
               <%= link_to "Profile page", user_path(current_user), class: "btn btn-show" %>
