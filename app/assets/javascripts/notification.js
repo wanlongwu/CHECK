@@ -24,9 +24,7 @@ const setTimer = () => {
       const newNotification = () => {
         var notification = new Notification('Posture Buddy', {
         icon: 'http://res.cloudinary.com/db9cynf8x/image/upload/v1520649172/logo.png',
-
         body: 'Please sit up straight, you can do it',
-
         });
         setTimeout(notification.close.bind(notification),30000)
       };
