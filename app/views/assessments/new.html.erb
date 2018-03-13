@@ -11,7 +11,7 @@
         <li> <h5> 2. Click on the camera button </h5> </li>
         <li> <h5> 3. Take 4 or 5 steps back </h5> </li>
         <li> <h5> 4. Face sideway, Stand straight </h5> </li>
-        <li> <h5> 5. Photo will be taken after 5 seconds you pressed the camera button  </h5> </li>
+        <li> <h5> 5. Photo will be taken 5 seconds after you pressed the camera button  </h5> </li>
         <li> <button id="button1" onclick="snapshot(); hideVideo(); countdown(); hideInstructionOne(); appearInstructionTwo(); "> <%= image_tag "camera.png" %> </button> </li>
       </ul>
 
@@ -29,7 +29,11 @@
           <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
           <li> <%= f.button :submit, "Submit for result", class: "btn" %> </li>
+          <li><a href="http://res.cloudinary.com/db9cynf8x/image/upload/v1520921096/jgueaptphzbaavzl46g3.png" target="_blank">
+          Click here for sample picture
+        </a></li>
         </ul>
+
       <% end %>
     </div>
     <div class="camera-container text-center">
@@ -41,4 +45,4 @@
   </div>
 </div>
 
-
+<!-- Button trigger modal -->
