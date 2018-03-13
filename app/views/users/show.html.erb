@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+ <%= javascript_include_tag "notification" %>
+
+ <h4>Posture Buddy -- Your personal posture reminder</h4>
+=======
  <%= javascript_include_tag "notification" %>
 
 <h4>Posture Buddy -- Your personal posture reminder</h4>
+>>>>>>> master
 
 <p></p>
 
@@ -16,11 +24,49 @@
   <button onclick="notifyMe()" class="form-control">Start</button>
 </div>
 
+<<<<<<< HEAD
+ <div class="wrapper-main">
+  <div class="container text-center">
+    <div class="profile-dashboard">
+      <div class="profile">
+        <div class="row">
+          <div class="dash-card col-md-2">
+            <h3>Profile</h3>
+            <% unless current_user.facebook_picture_url == nil %>
+            <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
+            <% end %>
+            <h3><%= current_user.first_name %></h3>
+          </div>
+        </div>
+      </div>
+      <div class="photos"><h3>Photos</h3>
+
+        <% @user.assessments.last(2).each do |assessment| %>
+        <%= cl_image_tag assessment.photo %>
+        <% end %>
+      </div>
+      <div class="tips">
+        <h3>Tip of the day</h3>
+        <p>"Every minute with a bad posture,sixty seconds pass"</p>
+      </div>
+      <div class="notification"><h3>Notifications</h3><%= image_tag "notification.png" %></div>
+      <div class="records">
+        <h3>Records</h3>
+        <p>Insufficient Data</p>
+      </div>
+      <div class="exercises">
+        <h3>Exercises</h3>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+>>>>>>> Stashed changes
+=======
+>>>>>>> master
 <div class="container">
   <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-  <% @user.assessments.last(3).each do |assessment| %>
-    <%= cl_image_tag assessment.photo %>
-  <% end %>
     <%= image_tag "deskposture.png"%>
   </div>
 </div>
