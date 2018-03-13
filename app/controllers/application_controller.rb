@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   def current_or_guest_user
     if current_user
       if session[:guest_user_id] && session[:guest_user_id] != current_user.id
-        # logging_in
+        logging_in
         # reload guest_user to prevent caching problems before destruction
         guest_user(with_retry = false).try(:reload).try(:destroy)
         session[:guest_user_id] = nil
@@ -47,7 +47,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
   def logging_in
