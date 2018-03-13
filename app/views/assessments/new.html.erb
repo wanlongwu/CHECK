@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <h2>Check Posture Cam</h2>
-    <h4>The check cam will evaluate your posture as viewed from the side, please read the instructions carefully before you start.</h4>
+    <h5>The check cam will evaluate your posture as viewed from the side, please read the instructions carefully before you start.</h5>
   </div>
   <div class="main-container">
     <div class="instructions-container">
@@ -27,8 +27,8 @@
           <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
+          <li> <%= f.button :submit, "Results", class: "btn" %> </li>
         </ul>
-        <%= f.button :submit, "Results", class: "btn" %>
       <% end %>
     </div>
     <div class="camera-container">

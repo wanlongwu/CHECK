@@ -1,39 +1,62 @@
 
 
-<h3 class="text-center">Result</h3>
+<h3 class="text-center">Results</h3>
 
-<div class="container">
-  <div class="row">
-    <div class="photo col-sm-4">
-      <%= image_tag @assessment.photo.url %>
-    </div>
-    <div class="suggestion col-sm-6">
-      Your shoulder angle is:
-      <%= @assessment.angle1.to_i %> degree <p>
-      Your hip angle is: <%= @assessment.angle2.to_i %> degree
-      <p> Your knee angle is: <%= @assessment.angle3.to_i %> degree
-      <p>
-      Here is the exercises that we suggest:
-      <div class="assessment-video">
-        <% @programs.each do |program| %>
-          <iframe width="176.4" height="132.3"
-          src= <%= program.exercise.content %> >
-          </iframe>
-        <% end %>
+<div class="show-container">
+      <div class="show-profile text-center">
+        <div class="show-main">
+          <div class="show-main-content">
+            <%= image_tag @assessment.photo.url, :size => "300x200" %>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            Your shoulder angle is:
+            <% if (175..180).include?(@assessment.angle1) %>
+              <div class="green"> <%= @assessment.angle1.to_i %> </div>
+            <% elsif (170..175).include?(@assessment.angle1) %>
+              <div class="orange"><%= @assessment.angle1.to_i %> </div>
+            <% else %>
+              <div class="red"><%= @assessment.angle1.to_i %> </div>
+            <% end %> degree
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-content">
+            Your hip angle is:
+            <% if (175..180).include?(@assessment.angle2) %>
+              <div class="green"> <%= @assessment.angle2.to_i %> </div>
+            <% elsif (170..175).include?(@assessment.angle2) %>
+              <div class="orange"><%= @assessment.angle2.to_i %> </div>
+            <% else %>
+              <div class="red"><%= @assessment.angle2.to_i %> </div>
+            <% end %> degree
+            </div>
+          </div>
+        <div class="stat">
+          <div class="stat-content">
+            Your knee angle is:
+            <% if (175..180).include?(@assessment.angle3) %>
+              <div class="green"> <%= @assessment.angle3.to_i %> </div>
+            <% elsif (170..175).include?(@assessment.angle3) %>
+              <div class="orange"><%= @assessment.angle3.to_i %> </div>
+            <% else %>
+              <div class="red"><%= @assessment.angle3.to_i %> </div>
+            <% end %> degree
+          </div>
+        </div>
+        <div class="description">
+          <div class="description-content">
+            <h3>Sign up for Postureit</h3>
+            <p class="text-justify">
+              Text about Postureit
+            </p>
+            <% if user_signed_in? %>
+              <%= link_to "Profile page", user_path(current_user), class: "btn btn-show" %>
+            <% else %>
+              <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-  </div>
-</div>
-<p>
-
-<% if user_signed_in? %>
-
-  <%= link_to "Profile page", user_path(current_user), :class => "btn btn-primary" %>
-
-<% else %>
-  <%= link_to "Create an account to do more stuff", new_user_registration_path %>
-
-<% end %>
-
-
