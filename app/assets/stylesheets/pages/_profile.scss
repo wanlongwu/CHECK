@@ -1,3 +1,20 @@
+.profile-dashboard {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr) ;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  min-height:100vh;
+}
+.profile-dashboard h3{
+  color: #56AFC1;
+}
+.profile-dashboard > div{
+  border: solid #246E89;
+  box-shadow: 2px 1px 1px #888888;
+  border-radius: 3%;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -6,18 +23,52 @@
 }
 
 .profile {
-  display: grid;
-  grid-template-columns: 350px 1fr 1fr 1fr;
-  grid-template-rows: 50% 50%;
-  height: calc(100vh - 70px);
-  padding: 30px;
-}
-
-.profile .main {
   grid-row: 1 / span 2;
   grid-column: 1 / span 1;
 }
 
+.photos {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 2;
+  border: solid;
+}
+.photos img {
+  width:400px;
+  height:250px;
+  margin-bottom: 10px;
+}
 
+.wrapper-tabs{
+  border:5px solid blue;
+  margin-bottom: 30px;
+  border: solid;
 
+}
+
+.tips{
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+.tips p{
+  font-style: italic;
+  font-size: 35px;
+  margin-top: 40px;
+}
+
+.notification{
+  grid-row: 2 / span 2;
+  grid-column: 3/ span 1;
+}
+.notification img {
+  border-radius: 5%;
+}
+.records{
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+}
+
+.exercises {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 3;
+}
 
