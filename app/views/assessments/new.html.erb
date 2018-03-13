@@ -32,9 +32,9 @@
       <% end %>
     </div>
     <div class="camera-container">
-      <body onload="init();">
-      <h6>Press "start" to begin</h6>
-      <button id="button1" onclick="startWebcam();">Start</button>
+      <body onload="init(); startWebcam(); ">
+       <button id="button1" onclick="snapshot(); hideVideo(); countdown(); ">Take Snapshot</button>
+       <div class="countdown" id="countdown"></div>
       <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
       <video width=800 height=600 id="video" autoplay></video>
       <canvas  id="myCanvas" width="800" height="600"></canvas>

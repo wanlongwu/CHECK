@@ -21,6 +21,9 @@
 
 <div class="container">
   <div class="col-xs-12 col-sm-2 col-sm-offset-2">
+  <% @user.assessments.last(3).each do |assessment| %>
+    <%= cl_image_tag assessment.photo %>
+  <% end %>
     <%= image_tag "deskposture.png"%>
   </div>
 </div>
