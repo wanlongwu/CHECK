@@ -1,21 +1,23 @@
-h2 {
+.cam-big-contriner h2 {
   text-align: center;
   color:$check-teal;
   text-size: bold;
 }
 
-h4 {
+.cam-big-contriner h4 {
   text-align: center;
   color:$check-darkblue;
 }
 
 .main-container {
   display: flex;
+  justify-content: space-around;
 }
 
 .instructions-container {
   flex: 300px 0 0;
   position: sticky !important;
+  margin-right: 50px;
 }
 
 .camera-container {
@@ -36,4 +38,11 @@ h4 {
 ul {
   list-style-type: none;
   width: 300px;
+}
+
+.countdown {
+  font-size: 150px;
+  font-weight: bold;
+  color: #56afc1;
+  margin-left: 159px;
 }
