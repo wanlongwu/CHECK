@@ -93,4 +93,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+  #add javascript file to load on user page
+  # config.assets.precompile += %w( notification.js )
 end

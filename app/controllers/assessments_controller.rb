@@ -9,7 +9,7 @@ class AssessmentsController < ApplicationController
     @assessment = Assessment.new(assessment_params)
     @assessment.user = current_or_guest_user
     @assessment.photo = change_img_params(assessment_params[:"photo"])
-    # @assessment.save!
+    @assessment.save!
     if (@assessment.angle1 - 180).abs > 5
       exercise_array += Exercise.where(category:"neck")
     end

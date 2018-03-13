@@ -1,15 +1,18 @@
 h1 {
-  color: $check-darkblue;
+  color: #b0eaff;
   font-size: 75px;
+  margin-bottom: 50px;
+  text-shadow: 3px 3px 3px grey;
 }
 
-h2 {
+.h2-home {
+  color: white;
   padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #banner {
-  background-image: url(image-path("checkhome.jpg"));
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(image-path("checkhome.jpg"));
   height: 100vh;
   background-size: cover !important;
   display: flex;
@@ -21,7 +24,7 @@ h2 {
 
 .btn {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: white;
     background-color: $check-lightteal;
   }

@@ -92,10 +92,13 @@ const getImageData = () => {
 
 const assessmentForm = document.querySelector("#new_assessment");
 
+
 // const prepareFormData = e => {
 //   console.log("hello");
 //   assessmentForm.submit();
 // };
+
+
 
 // // const submitBtn = document.querySelector(" query #new_assessment > input.btn");
 // assessmentForm.addEventListener("submit", prepareFormData, false)
