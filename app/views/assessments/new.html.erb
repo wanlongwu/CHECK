@@ -1,38 +1,39 @@
-<div class="container">
+<div class="container cam-big-contriner">
   <div class="row">
     <h2>Check Posture Cam</h2>
-    <h5>The check cam will evaluate your posture as viewed from the side, please read the instructions carefully before you start.</h5>
+    <h5>The check cam will evaluate your posture as viewed from the side, please read the instructions for better result.</h5>
   </div>
   <div class="main-container">
     <div class="instructions-container">
-      <h3>Instructions:</h3>
-      <ul>
-        <li> <h6> Adjust the camera </h6> </li>
-        <li> <h6>The camera will take a photo after 5 seconds </h6> </li>
-        <li> <h6> Click on the camera button </h6> </li>
-        <li> <h6> Take a few steps back </h6> </li>
-        <li> <h6> Stand normally face the side and look staright </h6> </li>
-        <li> <button id="button1" onclick="snapshot(); hideVideo(); countdown();"> <%= image_tag "camera.png" %> </button> </li>
+      <h3 class="text-center">Instructions:</h3>
+      <ul id="instruction1">
+        <li> <h5> 1. Adjust the camera angle </h5> </li>
+        <li> <h5> 2. Click on the camera button </h5> </li>
+        <li> <h5> 3. Take 4 or 5 steps back </h5> </li>
+        <li> <h5> 4. Face sideway, Stand straight </h5> </li>
+        <li> <h5> 5. Photo will be taken after 5 seconds you pressed the camera button  </h5> </li>
+        <li> <button id="button1" onclick="snapshot(); hideVideo(); countdown(); hideInstrucionOne(); "> <%= image_tag "camera.png" %> </button> </li>
       </ul>
+
+      <div class="countdown" id="countdown"></div>
 
       <%= simple_form_for @assessment do |f| %>
         <%= f.input :angle1, as: :hidden %>
         <%= f.input :angle2, as: :hidden %>
         <%= f.input :angle3, as: :hidden %>
         <%= f.input :photo, as: :hidden %>
-        <ul> <h5>Click on the following points:</h5>
+        <ul> <h5>Now please click on the following points in the photo. After clicking all 5 points, Submit for result</h5>
           <li><h5> <%= image_tag "cursor.png" %> Ear </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Shoulder </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
-          <li> <%= f.button :submit, "Results", class: "btn" %> </li>
+          <li> <%= f.button :submit, "Submit for result", class: "btn" %> </li>
         </ul>
       <% end %>
     </div>
-    <div class="camera-container">
+    <div class="camera-container text-center">
       <body onload="init(); startWebcam(); ">
-       <div class="countdown" id="countdown"></div>
       <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
       <video width=800 height=600 id="video" autoplay></video>
       <canvas  id="myCanvas" width="800" height="600"></canvas>

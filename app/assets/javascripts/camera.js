@@ -73,13 +73,17 @@ function startWebcam() {
     function snapshot() {
       setTimeout(function(){
        // Draws current image from the video element into the canvas
-      ctx.drawImage(video, 0,0, canvas.width, canvas.height);
+        ctx.drawImage(video, 0,0, canvas.width, canvas.height);
       },5000);
-
       // above is delay for 5 seconds;
     };
 
-
+    function hideInstrucionOne() {
+      setTimeout(function(){
+        const i = document.getElementById('instruction1');
+        i.parentNode.removeChild(i)
+      },6000);
+    };
 
 //       $("#canvas").click(function(e){
 //      getPosition(e);
