@@ -1,11 +1,12 @@
 h1 {
   color: $check-darkblue;
   font-size: 75px;
+  margin-bottom: 50px;
 }
 
 h2 {
   padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #banner {
@@ -21,7 +22,7 @@ h2 {
 
 .btn {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: white;
     background-color: $check-lightteal;
   }
