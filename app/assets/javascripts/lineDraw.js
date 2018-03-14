@@ -15,6 +15,14 @@ let photoUrl = null;
 
 let parsingArray = [];
 
+const buttonDisable = () => {
+  document.getElementById("submitForm").disabled = true;
+}
+
+const buttonEnable = () => {
+  document.getElementById("submitForm").disabled = false;
+}
+
 const a = document.getElementById("myCanvas");
 a.addEventListener("click",(event) => {
   getPosition(event);
@@ -42,7 +50,8 @@ function getPosition(event){
       alert("Great job! Now press submit for result")
       photoUrl = getImageData();
       // parsingArray.push([angleArray,photoUrl])
-      storePhoto(photoUrl)
+      storePhoto(photoUrl);
+      buttonEnable();
      }
 };
 
@@ -91,15 +100,14 @@ const getImageData = () => {
       // photo.setAttribute('src', data);
 };
 
-const assessmentForm = document.querySelector("#new_assessment");
 
+
+// const assessmentForm = document.querySelector("#new_assessment");
 
 // const prepareFormData = e => {
 //   console.log("hello");
 //   assessmentForm.submit();
 // };
-
-
 
 // // const submitBtn = document.querySelector(" query #new_assessment > input.btn");
 // assessmentForm.addEventListener("submit", prepareFormData, false)
