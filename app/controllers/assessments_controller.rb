@@ -5,6 +5,9 @@ class AssessmentsController < ApplicationController
     @assessment = Assessment.new
   end
   def create
+    # if @assessment.angle1? && @assessment.angle2? && @assessment.angle3? == false
+    #   render :new
+    # end
     exercise_array = []
     @assessment = Assessment.new(assessment_params)
     @assessment.user = current_or_guest_user

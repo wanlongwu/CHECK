@@ -30,7 +30,7 @@ function getPosition(event){
      i++;
      if (i>=6) {
       return;
-     }
+     };
      if(i>1){
       drawLine(xy[i-2][0],xy[i-2][1],xy[i-1][0],xy[i-1][1])
      };

@@ -54,7 +54,7 @@ function startWebcam() {
         const b = document.getElementById('button1');
         v.parentNode.removeChild(v);
         b.parentNode.removeChild(b);
-      },5000);
+      },6000);
     };
 
     function countdown(){
@@ -63,7 +63,7 @@ function startWebcam() {
         const countdownSpace = document.getElementById('countdown');
         countdownSpace.innerHTML = time;
         time--;
-        if(time < 0){
+        if(time < 1){
           clearInterval(intervalMethod);
           countdownSpace.innerHTML = "";
         }
@@ -74,7 +74,7 @@ function startWebcam() {
       setTimeout(function(){
        // Draws current image from the video element into the canvas
         ctx.drawImage(video, 0,0, canvas.width, canvas.height);
-      },5000);
+      },6000);
       // above is delay for 5 seconds;
     };
 
