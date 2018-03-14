@@ -39,6 +39,7 @@ function getPosition(event){
       storeAngle(angle, i);
      };
      if(i==5){
+      alert("Great job! Now press submit for result")
       photoUrl = getImageData();
       // parsingArray.push([angleArray,photoUrl])
       storePhoto(photoUrl)

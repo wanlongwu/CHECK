@@ -4,6 +4,10 @@
   text-size: bold;
 }
 
+video {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .cam-big-contriner h4 {
   text-align: center;
   color:$check-darkblue;
@@ -44,5 +48,5 @@ ul {
   font-size: 150px;
   font-weight: bold;
   color: #56afc1;
-  margin-left: 159px;
+  margin-left: 120px;
 }

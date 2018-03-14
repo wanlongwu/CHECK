@@ -78,10 +78,17 @@ function startWebcam() {
       // above is delay for 5 seconds;
     };
 
-    function hideInstrucionOne() {
+    function hideInstructionOne() {
       setTimeout(function(){
         const i = document.getElementById('instruction1');
         i.parentNode.removeChild(i)
+      },6000);
+    };
+
+    function appearInstructionTwo(){
+      setTimeout(function(){
+        const j = document.getElementById('hidden');
+        j.classList.remove("hidden");
       },6000);
     };
 
