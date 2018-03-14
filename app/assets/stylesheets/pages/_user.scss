@@ -1,3 +1,6 @@
+.wrapper-main {
+  background-size: 100vh
+}
 .profile-dashboard {
   display: grid;
   grid-template-rows: repeat(4, 1fr) ;
@@ -15,7 +18,7 @@
   border-radius: 3%;
 }
 
-.container {
+.container-profile {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -42,13 +45,13 @@
   border:5px solid blue;
   margin-bottom: 30px;
   border: solid;
-
 }
 
 .tips{
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
 }
+
 .tips p{
   font-style: italic;
   font-size: 35px;
@@ -59,9 +62,11 @@
   grid-row: 2 / span 2;
   grid-column: 3/ span 1;
 }
+
 .notification img {
   border-radius: 5%;
 }
+
 .records{
   grid-row: 3 / span 1;
   grid-column: 1 / span 2;
@@ -71,4 +76,6 @@
   grid-row: 4 / span 1;
   grid-column: 1 / span 3;
 }
+
+
 
