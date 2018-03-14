@@ -55,7 +55,7 @@
               PostureIt is your posture buddy at your office or anywhere you're sitting now and reading this. PostureIt will remind to sit up straight .
             </p>
             <% if user_signed_in? %>
-              <%= link_to "Profile page", user_path(current_user), class: "btn btn-show" %>
+              <%= link_to "Profile page", profile_path(current_user), class: "btn btn-show" %>
             <% else %>
               <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
             <% end %>
