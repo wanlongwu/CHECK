@@ -1,5 +1,5 @@
 .wrapper-main {
-  background-size: 100vh
+  background-color: #4a8e9b;
 }
 .profile-dashboard {
   display: grid;
@@ -7,15 +7,23 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  min-height:100vh;
+  height:800px;
+  width:70%;
+  margin:auto;
 }
+
 .profile-dashboard h3{
   color: #56AFC1;
 }
 .profile-dashboard > div{
   border: solid #246E89;
   box-shadow: 2px 1px 1px #888888;
-  border-radius: 3%;
+  border-radius: 1%;
+  background-color:white;
+}
+
+.profile-dashboard > div:hover{
+  box-shadow:0 0 10px white;
 }
 
 .container-profile {
@@ -39,6 +47,11 @@
   width:400px;
   height:250px;
   margin-bottom: 10px;
+  border-radius: 1%;
+  position:relative;
+}
+.photos img:hover {
+  box-shadow:0 0 10px grey;
 }
 
 .wrapper-tabs{
@@ -50,6 +63,7 @@
 .tips{
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
+  height:400px;
 }
 
 .tips p{
@@ -70,12 +84,20 @@
 .records{
   grid-row: 3 / span 1;
   grid-column: 1 / span 2;
+  height:400px;
 }
 
 .exercises {
   grid-row: 4 / span 1;
   grid-column: 1 / span 3;
+  height:400px;
+}
+.exercises img {
+  width: 500px;
+  height: 400px;
 }
 
-
-
+.wrapper-middle-banner {
+  height: 50%;
+  background-color: white;
+}
