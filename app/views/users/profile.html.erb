@@ -7,21 +7,34 @@
   <div class="container-profile text-center">
     <div class="profile-dashboard">
       <div class="profile">
-        <h3>Profile</h3>
-        <% unless current_user.facebook_picture_url == nil %>
-        <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
-        <% end %>
-        <h3><%= current_user.first_name %></h3>
+        <div class="profile-title">
+          <h3>Profile</h3>
+        </div>
+        <div class="profile-avatar">
+          <% unless current_user.facebook_picture_url == nil %>
+          <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
+          <% end %>
+          <h3><%= current_user.first_name %></h3>
+        </div>
+        <div class="profile-calendar"></div>
       </div>
       <div class="photos">
-        <h3>Photos</h3>
-        <% @user.assessments.last(2).each do |assessment| %>
-        <%= cl_image_tag assessment.photo %>
-        <% end %>
+        <div class="photos-title">
+          <h3>Photos</h3>
+        </div>
+        <div class="photos-img">
+          <% @user.assessments.last(2).each do |assessment| %>
+          <%= cl_image_tag assessment.photo %>
+          <% end %>
+        </div>
       </div>
       <div class="tips">
-        <h3>Tip of the day</h3>
-        <p>"Every minute with a bad posture,sixty seconds pass"</p>
+        <div class="tips-title">
+          <h3>Tip of the day</h3>
+        </div>
+        <div class="tips-content">
+          <p>"Every minute with a bad posture,sixty seconds pass"</p>
+        </div>
       </div>
       <div class="notification">
         <div class="form-group">
@@ -39,11 +52,18 @@
         </div>
       </div>
       <div class="records">
-        <h3>Records</h3>
-        <p>Insufficient Data</p>
+        <div class="records-title">
+          <h3>Records</h3>
+        </div>
+        <div class="records-content">
+          <p>Insufficient Data</p>
+        </div>
       </div>
       <div class="exercises">
-        <h3>Exercises</h3>
+        <div class="exercises-title">
+          <h3>Exercises</h3>
+        </div>
+        <div class="exercises-content"></div>
       </div>
     </div>
     <div class="empty"></div>
