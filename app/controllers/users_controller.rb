@@ -14,5 +14,6 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
+    @tip = Tip.all.sample.content
   end
 end

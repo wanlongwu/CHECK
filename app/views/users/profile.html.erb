@@ -29,10 +29,10 @@
       </div>
       <div class="tips">
         <div class="tips-title">
-          <h3>Tip of the day</h3>
+          <h3>  </h3>
         </div>
         <div class="tips-content">
-          <p>"Every minute with a bad posture,sixty seconds pass"</p>
+          <p><%= @tip %></p>
         </div>
       </div>
       <div class="notification">
@@ -41,13 +41,13 @@
           <h3>Posture Buddy -- Your personal posture reminder</h3>
           <label for="pb-time">How often do you want to be reminded (in minutes)</label>
           <select class="form-control" id="pb-time-select">
-            <option>0.2</option>
+            <option>0.1</option>
             <option>15</option>
             <option>30</option>
             <option>45</option>
             <option>60</option>
           </select>
-          <button onclick="notifyMe()" class="form-control" class="bnt btn-primary">Start</button>
+          <button onclick="notifyMe()" class="form-control" class="btn btn-primary">Start</button>
         </div>
       </div>
       <div class="records">
