@@ -5,9 +5,9 @@ Rails.application.routes.draw do
       registrations: 'registrations'
      }
   root to: 'pages#home'
-  get '/profile', to: 'pages#profile'
+  get '/profile', to: 'users#profile'
   resources :assessments
-  resources :users, only: [:show]
+  get '/result', to: 'assessments#display'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

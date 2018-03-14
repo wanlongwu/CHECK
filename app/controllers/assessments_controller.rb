@@ -1,10 +1,13 @@
 class AssessmentsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create, :show]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show, :display]
 
   def new
     @assessment = Assessment.new
   end
   def create
+    # if @assessment.angle1? && @assessment.angle2? && @assessment.angle3? == false
+    #   render :new
+    # end
     exercise_array = []
     @assessment = Assessment.new(assessment_params)
     @assessment.user = current_or_guest_user
@@ -25,11 +28,17 @@ class AssessmentsController < ApplicationController
     unless current_user
       session[:guest_user_id] = guest_user.id
     end
-    redirect_to assessment_path(@assessment)
+    session[:assessment_id] = @assessment.id
+    redirect_to result_path(@assessment)
   end
 
   def show
     @assessment = Assessment.find(params[:id])
+    @programs = @assessment.programs[0..2]
+  end
+
+  def display
+    @assessment = Assessment.find(session[:assessment_id])
     @programs = @assessment.programs[0..2]
   end
 

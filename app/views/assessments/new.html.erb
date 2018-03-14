@@ -32,7 +32,7 @@
           <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
-          <li> <%= f.button :submit, "Submit for result", class: "btn" %> </li>
+          <li> <%= f.button :submit, "Submit for result", class: "btn", id: "submitForm" %> </li>
           <li><a href="http://res.cloudinary.com/db9cynf8x/image/upload/v1520921096/jgueaptphzbaavzl46g3.png" target="_blank">
           Click here for sample picture
         </a></li>
@@ -41,7 +41,7 @@
       <% end %>
     </div>
     <div class="camera-container text-center">
-      <body onload="init(); startWebcam(); ">
+      <body onload="init(); startWebcam(); buttonDisable();">
       <!--     <button onclick="stopWebcam();">Stop WebCam</button>-->
       <video width=800 height=600 id="video" autoplay></video>
       <canvas  id="myCanvas" width="800" height="600"></canvas>

@@ -2,49 +2,53 @@
 <% content_for :meta_description %>
 <% content_for :meta_image %>
 
-<div class="wrapper-main">
-<div class="container-profile text-center">
-  <div class="profile-dashboard">
-    <div class="profile">
-      <h3>Profile</h3>
-      <% unless current_user.facebook_picture_url == nil %>
-      <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
-      <% end %>
-      <h3><%= current_user.first_name %></h3>
-    </div>
-    <div class="photos">
-      <h3>Photos</h3>
-      <% @user.assessments.last(2).each do |assessment| %>
-      <%= cl_image_tag assessment.photo %>
-      <% end %>
-    </div>
-    <div class="tips">
-      <h3>Tip of the day</h3>
-      <p>"Every minute with a bad posture,sixty seconds pass"</p>
-    </div>
-    <div class="notification">
-      <div class="form-group">
-        <%= javascript_include_tag "notification" %>
-        <h3>Posture Buddy -- Your personal posture reminder</h3>
-        <label for="pb-time">How often do you want to be reminded (in minutes)</label>
-        <select class="form-control" id="pb-time-select">
-          <option>0.2</option>
-          <option>15</option>
-          <option>30</option>
-          <option>45</option>
-          <option>60</option>
-        </select>
-        <button onclick="notifyMe()" class="form-control">Start</button>
+<body>
+  <div class="wrapper-main">
+  <div class="container-profile text-center">
+    <div class="profile-dashboard">
+      <div class="profile">
+        <h3>Profile</h3>
+        <% unless current_user.facebook_picture_url == nil %>
+        <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
+        <% end %>
+        <h3><%= current_user.first_name %></h3>
+      </div>
+      <div class="photos">
+        <h3>Photos</h3>
+        <% @user.assessments.last(2).each do |assessment| %>
+        <%= cl_image_tag assessment.photo %>
+        <% end %>
+      </div>
+      <div class="tips">
+        <h3>Tip of the day</h3>
+        <p>"Every minute with a bad posture,sixty seconds pass"</p>
+      </div>
+      <div class="notification">
+        <div class="form-group">
+          <%= javascript_include_tag "notification" %>
+          <h3>Posture Buddy -- Your personal posture reminder</h3>
+          <label for="pb-time">How often do you want to be reminded (in minutes)</label>
+          <select class="form-control" id="pb-time-select">
+            <option>0.2</option>
+            <option>15</option>
+            <option>30</option>
+            <option>45</option>
+            <option>60</option>
+          </select>
+          <button onclick="notifyMe()" class="form-control" class="bnt btn-primary">Start</button>
+        </div>
+      </div>
+      <div class="records">
+        <h3>Records</h3>
+        <p>Insufficient Data</p>
+      </div>
+      <div class="exercises">
+        <h3>Exercises</h3>
       </div>
     </div>
-    <div class="records">
-      <h3>Records</h3>
-      <p>Insufficient Data</p>
-    </div>
-    <div class="exercises">
-      <h3>Exercises</h3>
-      <%= image_tag "deskposture.png"%>
-    </div>
+    <div class="empty"></div>
   </div>
-</div>
-</div>
+  </div>
+  <div class="wrapper-middle-banner"></div>
+  <div class="wrapper-bottom-banner"></div>
+</body>
