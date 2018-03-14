@@ -10,6 +10,9 @@ class UsersController < ApplicationController
      #  assessment.user_id = current_user.id
      #  assessment.save!
     # end
+  end
 
+  def profile
+    @user = current_user
   end
 end
