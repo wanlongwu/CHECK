@@ -46,6 +46,10 @@ class ApplicationController < ActionController::Base
     current_or_guest_user
   end
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   private
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
