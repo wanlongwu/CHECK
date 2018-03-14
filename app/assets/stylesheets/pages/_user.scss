@@ -18,8 +18,12 @@
 .profile-dashboard > div{
   border: solid #246E89;
   box-shadow: 2px 1px 1px #888888;
-  border-radius: 1%;
+  border-radius: 4%;
   background-color:white;
+}
+.profile-dashboard > div {
+  -webkit-transition: width 2s;
+  transition: width 2s;
 }
 
 .profile-dashboard > div:hover{
@@ -44,7 +48,7 @@
   border: solid;
 }
 .photos img {
-  width:400px;
+  width:350px;
   height:250px;
   margin-bottom: 10px;
   border-radius: 1%;
@@ -63,11 +67,11 @@
 .tips{
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
-  height:400px;
+  height:300px;
 }
 
 .tips p{
-  font-style: italic;
+  font-style: oblique;
   font-size: 35px;
   margin-top: 40px;
 }
@@ -84,13 +88,13 @@
 .records{
   grid-row: 3 / span 1;
   grid-column: 1 / span 2;
-  height:400px;
+  height:300px;
 }
 
 .exercises {
   grid-row: 4 / span 1;
   grid-column: 1 / span 3;
-  height:400px;
+  height:300px;
 }
 .exercises img {
   width: 500px;

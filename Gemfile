@@ -10,7 +10,6 @@ gem 'rails', '5.1.5'
 gem 'redis'
 gem 'faker'
 
-
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
