@@ -11,48 +11,48 @@
         </div>
         <div class="stat">
           <div class="stat-content">
-            Shoulder angle:
-            <% if (175..180).include?(@assessment.angle1) %>
-              <div class="green"> <%= @assessment.angle1.to_i %> </div>
+           <h3>Shoulder angle: </h3>
+            <h4><% if (175..180).include?(@assessment.angle1) %>
+              <div class="green"> <%= @assessment.angle1.to_i %> degree </div>
             <% elsif (170..175).include?(@assessment.angle1) %>
-              <div class="orange"><%= @assessment.angle1.to_i %> </div>
+              <div class="orange"><%= @assessment.angle1.to_i %> degree  </div>
             <% else %>
-              <div class="red"><%= @assessment.angle1.to_i %> </div>
-            <% end %>
+              <div class="red"><%= @assessment.angle1.to_i %> degree  </div>
+            <% end %></h4>
             <p class="showp">Optimal: 180</p>
           </div>
         </div>
         <div class="stat">
           <div class="stat-content">
-            Hip angle:
-            <% if (175..180).include?(@assessment.angle2) %>
-              <div class="green"> <%= @assessment.angle2.to_i %> </div>
+            <h3>Hip angle: </h3>
+            <h4><% if (175..180).include?(@assessment.angle2) %>
+              <div class="green"> <%= @assessment.angle2.to_i %> degree </div>
             <% elsif (170..175).include?(@assessment.angle2) %>
-              <div class="orange"><%= @assessment.angle2.to_i %> </div>
+              <div class="orange"><%= @assessment.angle2.to_i %> degree  </div>
             <% else %>
-              <div class="red"><%= @assessment.angle2.to_i %> </div>
-            <% end %>
-            <p class="showp">Optimal angle=180</p>
+              <div class="red"><%= @assessment.angle2.to_i %> degree  </div>
+            <% end %></h4>
+            <p class="showp">Optimal: 180</p>
             </div>
           </div>
         <div class="stat">
           <div class="stat-content">
-            Knee angle:
-            <% if (175..180).include?(@assessment.angle3) %>
-              <div class="green"> <%= @assessment.angle3.to_i %> </div>
+            <h3>Knee angle:</h3>
+           <h4> <% if (175..180).include?(@assessment.angle3) %>
+              <div class="green"> <%= @assessment.angle3.to_i %> degree </div>
             <% elsif (170..175).include?(@assessment.angle3) %>
-              <div class="orange"><%= @assessment.angle3.to_i %> </div>
+              <div class="orange"><%= @assessment.angle3.to_i %>  degree</div>
             <% else %>
-              <div class="red"><%= @assessment.angle3.to_i %> </div>
-            <% end %>
-            <p class="showp">Optimal angle=180</p>
+              <div class="red"><%= @assessment.angle3.to_i %> degree</div>
+            <% end %> </h4>
+            <p class="showp">Optimal: 180</p>
           </div>
         </div>
         <div class="description">
           <div class="description-content">
-            <h3>Sign up for PostureIt</h3>
+            <h3>Click and Go to PostureIt</h3>
             <p class="text-justify">
-              PostureIt is your posture buddy at your office or anywhere you're sitting now and reading this. PostureIt will remind to sit up straight .
+              PostureIt is your personal posture buddy that provides: reminder, daily exercises based on the assessment, assessment history, and many more.
             </p>
             <% if user_signed_in? %>
               <%= link_to "Profile page", profile_path(current_user), class: "btn btn-show" %>
