@@ -56,16 +56,58 @@
           <h3>Records</h3>
         </div>
         <div class="records-content">
-          <p>Insufficient Data</p>
+        <% assessment = @user.assessments.last %>
+          <div class="stat">
+            <div class="stat-content">
+              Shoulder angle:
+              <% if (175..180).include?(assessment.angle1) %>
+                <div class="green"> <%= assessment.angle1.to_i %> </div>
+              <% elsif (170..175).include?(assessment.angle1) %>
+                <div class="orange"><%= assessment.angle1.to_i %> </div>
+              <% else %>
+                <div class="red"><%= assessment.angle1.to_i %> </div>
+              <% end %>
+              <p class="showp">Optimal: 180</p>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-content">
+              Hip angle:
+              <% if (175..180).include?(assessment.angle2) %>
+                <div class="green"> <%= assessment.angle2.to_i %> </div>
+              <% elsif (170..175).include?(assessment.angle2) %>
+                <div class="orange"><%= assessment.angle2.to_i %> </div>
+              <% else %>
+                <div class="red"><%= assessment.angle2.to_i %> </div>
+              <% end %>
+              <p class="showp">Optimal angle=180</p>
+              </div>
+            </div>
+          <div class="stat">
+            <div class="stat-content">
+              Knee angle:
+              <% if (175..180).include?(assessment.angle3) %>
+                <div class="green"> <%= assessment.angle3.to_i %> </div>
+              <% elsif (170..175).include?(assessment.angle3) %>
+                <div class="orange"><%= assessment.angle3.to_i %> </div>
+              <% else %>
+                <div class="red"><%= assessment.angle3.to_i %> </div>
+              <% end %>
+              <p class="showp">Optimal angle=180</p>
+            </div>
+          </div>
         </div>
-      </div>
+        </div>
       <div class="exercises">
         <div class="exercises-title">
           <h3>Exercises</h3>
         </div>
-        <div class="exercises-content"></div>
+        <div class="exercises-content">
+          <p>人めの融大や当欲者コヲ除日権位トご再州ノチ体禁ヲオ考質セワトレ図党フッ意絡がくぶ都社ヘ宮護トぜさつ回37動ソル大裁防御裕じどへゆ。齢ぞレのだ言設自ラめだ北93敗レ寄謙う育止進テシニネ京務1外死ワオ他活ひゃけ分需アス再説ケ連観散ぱもは。治かろれ打分おろ経波サキセエ青元ぞらとぶ基整ン半裏ぱじこい校終え芸事先ノ封量ぞれしリ既今ムマユワ勢演んわり新氏藤省奈ぶよかび。</p>
+        </div>
       </div>
     </div>
+  </div>
     <div class="empty"></div>
   </div>
   </div>

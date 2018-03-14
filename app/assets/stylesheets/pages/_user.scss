@@ -95,13 +95,16 @@
   grid-row: 4 / span 1;
   grid-column: 1 / span 3;
   height:300px;
-}
-.exercises img {
-  width: 500px;
-  height: 400px;
+  text-align: center;
+  margin:0;
 }
 
 .wrapper-middle-banner {
   height: 50%;
   background-color: white;
+}
+
+.records-content {
+  display:flex;
+  justify-content: center;
 }
