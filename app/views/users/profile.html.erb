@@ -70,6 +70,7 @@
           <div class="stat">
             <div class="stat-content">
              <h3>Shoulder angle: </h3>
+             <% if assessment.angle1 != 0 %>
               <h4><% if (175..180).include?(assessment.angle1) %>
                 <div class="green"> <%= assessment.angle1.to_i %>° </div>
               <% elsif (170..175).include?(assessment.angle1) %>
@@ -104,6 +105,7 @@
                 <div class="red"><%= assessment.angle3.to_i %>°</div>
               <% end %> </h4>
               <p class="showp">Optimal: 180°</p>
+              <% end %>
             </div>
           </div>
         </div>
