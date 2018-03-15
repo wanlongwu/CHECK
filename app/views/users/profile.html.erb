@@ -102,7 +102,9 @@
           <h3>Exercises</h3>
         </div>
         <div class="exercises-content">
-          <p>人めの融大や当欲者コヲ除日権位トご再州ノチ体禁ヲオ考質セワトレ図党フッ意絡がくぶ都社ヘ宮護トぜさつ回37動ソル大裁防御裕じどへゆ。齢ぞレのだ言設自ラめだ北93敗レ寄謙う育止進テシニネ京務1外死ワオ他活ひゃけ分需アス再説ケ連観散ぱもは。治かろれ打分おろ経波サキセエ青元ぞらとぶ基整ン半裏ぱじこい校終え芸事先ノ封量ぞれしリ既今ムマユワ勢演んわり新氏藤省奈ぶよかび。</p>
+          <% current_user.assessments.last.programs.sample(3).each do |program| %>
+            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+          <% end %>
         </div>
       </div>
     </div>
