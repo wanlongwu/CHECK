@@ -38,10 +38,26 @@
           <h3>Photos</h3>
         </div>
         <div class="photos-img">
-          <% @user.assessments.last(2).each do |assessment| %>
-          <%= cl_image_tag assessment.photo %>
-          <% end %>
+          <% a1 = @user.assessments.first %>
+          <% a2 = @user.assessments.last %>
+          <div class="a1">
+            <p>First Pic</p>
+          <%= cl_image_tag a1.photo %>
+          </div>
+          <div class="a2">
+            <p>Latest Pic</p>
+          <%= cl_image_tag a2.photo %>
+          </div>
         </div>
+        <% if a1.angle1 < a2.angle1 %>
+         <h4> <%= "Your shoulder angle has improved by #{(a2.angle1-a1.angle1).to_i} degrees!" %> </h4>
+        <% end %>
+        <% if a1.angle2 < a2.angle2 %>
+         <h4> <%= "Your hip angle has improved by #{(a2.angle2-a1.angle2).to_i} degrees!" %> </h4>
+        <% end %>
+        <% if a1.angle3 < a2.angle3 %>
+         <h4> <%= "Your knee angle has improved by #{(a2.angle3-a1.angle3).to_i} degrees!" %> </h4>
+        <% end %>
       </div>
       <div class="tips">
         <div class="tips-title">

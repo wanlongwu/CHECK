@@ -2,6 +2,7 @@
 <% content_for :meta_description %>
 <% content_for :meta_image %>
 
+<div class="result-wrapper">
 <h2 class="text-center">Results</h2>
 <div class="wrapper-flex">
   <div class="show-container">
@@ -22,7 +23,6 @@
           <p class="showp">Optimal: 180°</p>
           <%= image_tag "human-neck.png" %>
         </div>
-<<<<<<< Updated upstream
         <div class="stat">
           <div class="stat-content">
            <h3>Shoulder angle: </h3>
@@ -74,7 +74,6 @@
               <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
             <% end %>
           </div>
-=======
       </div>
       <div class="stat">
         <div class="stat-content">
@@ -115,9 +114,10 @@
           <% else %>
             <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
           <% end %>
->>>>>>> Stashed changes
         </div>
       </div>
     </div>
+  </div>
+</div>
   </div>
 </div>
