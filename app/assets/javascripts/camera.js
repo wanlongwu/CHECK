@@ -63,7 +63,7 @@ function startWebcam() {
         const countdownSpace = document.getElementById('countdown');
         countdownSpace.innerHTML = time;
         time--;
-        if(time < 1){
+        if(time < 0){
           clearInterval(intervalMethod);
           countdownSpace.innerHTML = "";
         }
