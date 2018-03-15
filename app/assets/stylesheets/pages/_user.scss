@@ -115,10 +115,11 @@
 
 .photos-img{
   display: flex;
+  justify-content: center;
 }
 
 .photos-img img{
-  margin-left:40px;
+  margin: 10px 10px 30px 10px;
 }
 
 .wrapper-tabs{

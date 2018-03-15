@@ -13,7 +13,9 @@
           </div>
           <div class="profile-avatar">
             <h3>Welcome back  <%= current_user.first_name %>!</h3>
-            <% unless current_user.facebook_picture_url == nil %>
+            <% if current_user.facebook_picture_url == nil %>
+            <%= image_tag "profile.png", class: "dashboard-avatar" %>
+            <% else %>
             <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
             <% end %>
           </div>
@@ -44,10 +46,12 @@
             <p>First Pic</p>
           <%= cl_image_tag a1.photo %>
           </div>
-          <div class="a2">
-            <p>Latest Pic</p>
-          <%= cl_image_tag a2.photo %>
-          </div>
+          <% unless a1 == a2 %>
+            <div class="a2">
+              <p>Latest Pic</p>
+            <%= cl_image_tag a2.photo %>
+            </div>
+          <% end %>
         </div>
         <% if a1.angle1 < a2.angle1 %>
          <h4> <%= "Your shoulder angle has improved by #{(a2.angle1-a1.angle1).to_i} degrees!" %> </h4>
