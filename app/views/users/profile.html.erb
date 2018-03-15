@@ -56,8 +56,10 @@
           <h3>Exercises</h3>
         </div>
         <div class="exercises-content">
-          <% current_user.assessments.last.programs.sample(3).each do |program| %>
-            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+          <% if current_user.assessments.last != nil %>
+            <% current_user.assessments.last.programs.sample(3).each do |program| %>
+              <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -70,7 +72,7 @@
           <div class="stat">
             <div class="stat-content">
              <h3>Shoulder angle: </h3>
-             <% if assessment.angle1 != 0 %>
+             <% if assessment != nil %>
               <h4><% if (175..180).include?(assessment.angle1) %>
                 <div class="green"> <%= assessment.angle1.to_i %>° </div>
               <% elsif (170..175).include?(assessment.angle1) %>
