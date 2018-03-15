@@ -32,15 +32,23 @@ class AssessmentsController < ApplicationController
     redirect_to result_path(@assessment)
   end
 
-  def show
-    @assessment = Assessment.find(params[:id])
-    @programs = @assessment.programs[0..2]
-  end
+  # def show
+  #   @assessment = Assessment.find(params[:id])
+  #   @programs = @assessment.programs[0..2]
+  # end
 
   def display
     @assessment = Assessment.find(session[:assessment_id])
     @programs = @assessment.programs[0..2]
   end
+
+  def destroy
+    @assessment = Assessment.find(params[:id])
+    @assessment.destroy
+    redirect_to profile_path
+  end
+
+
 
   private
 
