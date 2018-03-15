@@ -1,5 +1,6 @@
 .wrapper-main {
   background-color: #4a8e9b;
+
 }
 .profile-dashboard {
   display: grid;
@@ -91,6 +92,17 @@
   height:300px;
 }
 
+.records > div{
+  justify-content: center;
+}
+
+.records-content {
+  display:flex;
+  position:absolute;
+  justify-content: center;
+  margin-left:50px;
+}
+
 .exercises {
   grid-row: 4 / span 1;
   grid-column: 1 / span 3;
@@ -104,7 +116,3 @@
   background-color: white;
 }
 
-.records-content {
-  display:flex;
-  justify-content: center;
-}
