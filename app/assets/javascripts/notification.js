@@ -28,6 +28,7 @@ const setTimer = () => {
         });
         setTimeout(notification.close.bind(notification),30000)
       };
+      newNotification();
       setInterval(newNotification, setTimer());
       // notification.onclick = function () {
       //   window.open("http://stackoverflow.com/a/13328397/1269037");

@@ -1,22 +1,38 @@
 <% content_for :meta_title, "current_user.first_name" %>
 <% content_for :meta_description %>
 <% content_for :meta_image %>
+ <%= javascript_include_tag "notification" %>
 
   <!-- <div class="wrapper-main"> -->
   <div class="container-profile text-center">
     <div class="profile-dashboard">
       <div class="profile">
-        <div class="profile-title">
-          <h3>Profile</h3>
+        <div class="profile-body">
+          <div class="profile-title">
+            <!-- <h3>Profile</h3> -->
+          </div>
+          <div class="profile-avatar">
+            <h3>Welcome back  <%= current_user.first_name %>!</h3>
+            <% unless current_user.facebook_picture_url == nil %>
+            <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
+            <% end %>
+          </div>
         </div>
-        <div class="profile-avatar">
-          <% unless current_user.facebook_picture_url == nil %>
-          <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
-          <% end %>
-          <h3><%= current_user.first_name %></h3>
+        <div class="form-group notification-body">
+            <h3>PostureIT </h3>
+            <h4>Your personal posture reminder</h4>
+            <label for="pb-time">How often do you want to be reminded (in minutes)</label>
+            <select class="form-control text-center"  id="pb-time-select">
+              <option>0.5</option>
+              <option>1</option>
+              <option>15</option>
+              <option>30</option>
+              <option>45</option>
+              <option>60</option>
+            </select>
+            <button onclick="notifyMe()" class="btn btn-primary">Start</button>
+          </div>
         </div>
-        <div class="profile-calendar"></div>
-      </div>
       <div class="photos">
         <div class="photos-title">
           <h3>Photos</h3>
@@ -29,74 +45,12 @@
       </div>
       <div class="tips">
         <div class="tips-title">
-          <h3>  </h3>
+          <h3> Posture Tip </h3>
         </div>
         <div class="tips-content">
-          <p><%= @tip %></p>
+          <p>"<%= @tip %>"</p>
         </div>
       </div>
-      <div class="notification">
-        <div class="form-group">
-          <%= javascript_include_tag "notification" %>
-          <h3>Posture Buddy -- Your personal posture reminder</h3>
-          <label for="pb-time">How often do you want to be reminded (in minutes)</label>
-          <select class="form-control" id="pb-time-select">
-            <option>0.1</option>
-            <option>15</option>
-            <option>30</option>
-            <option>45</option>
-            <option>60</option>
-          </select>
-          <button onclick="notifyMe()" class="form-control" class="btn btn-primary">Start</button>
-        </div>
-      </div>
-      <div class="records">
-        <div class="records-title">
-          <h3>Records</h3>
-        </div>
-        <div class="records-content">
-        <% assessment = @user.assessments.last %>
-          <div class="stat">
-            <div class="stat-content">
-              Shoulder angle:
-              <% if (175..180).include?(assessment.angle1) %>
-                <div class="green"> <%= assessment.angle1.to_i %> </div>
-              <% elsif (170..175).include?(assessment.angle1) %>
-                <div class="orange"><%= assessment.angle1.to_i %> </div>
-              <% else %>
-                <div class="red"><%= assessment.angle1.to_i %> </div>
-              <% end %>
-              <p class="showp">Optimal: 180</p>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="stat-content">
-              Hip angle:
-              <% if (175..180).include?(assessment.angle2) %>
-                <div class="green"> <%= assessment.angle2.to_i %> </div>
-              <% elsif (170..175).include?(assessment.angle2) %>
-                <div class="orange"><%= assessment.angle2.to_i %> </div>
-              <% else %>
-                <div class="red"><%= assessment.angle2.to_i %> </div>
-              <% end %>
-              <p class="showp">Optimal angle=180</p>
-              </div>
-            </div>
-          <div class="stat">
-            <div class="stat-content">
-              Knee angle:
-              <% if (175..180).include?(assessment.angle3) %>
-                <div class="green"> <%= assessment.angle3.to_i %> </div>
-              <% elsif (170..175).include?(assessment.angle3) %>
-                <div class="orange"><%= assessment.angle3.to_i %> </div>
-              <% else %>
-                <div class="red"><%= assessment.angle3.to_i %> </div>
-              <% end %>
-              <p class="showp">Optimal angle=180</p>
-            </div>
-          </div>
-        </div>
-        </div>
       <div class="exercises">
         <div class="exercises-title">
           <h3>Exercises</h3>
@@ -105,6 +59,53 @@
           <% current_user.assessments.last.programs.sample(3).each do |program| %>
             <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
           <% end %>
+        </div>
+      </div>
+      <div class="records">
+        <div class="records-title">
+          <h3>Latest Records</h3>
+        </div>
+        <div class="records-content">
+        <% assessment = @user.assessments.last %>
+          <div class="stat">
+            <div class="stat-content">
+             <h3>Shoulder angle: </h3>
+              <h4><% if (175..180).include?(assessment.angle1) %>
+                <div class="green"> <%= assessment.angle1.to_i %>° </div>
+              <% elsif (170..175).include?(assessment.angle1) %>
+                <div class="orange"><%= assessment.angle1.to_i %>°  </div>
+              <% else %>
+                <div class="red"><%= assessment.angle1.to_i %>°  </div>
+              <% end %></h4>
+              <p class="showp">Optimal: 180°</p>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-content">
+              <h3>Hip angle: </h3>
+              <h4><% if (175..180).include?(assessment.angle2) %>
+                <div class="green"> <%= assessment.angle2.to_i %>° </div>
+              <% elsif (170..175).include?(assessment.angle2) %>
+                <div class="orange"><%= assessment.angle2.to_i %>°  </div>
+              <% else %>
+                <div class="red"><%= assessment.angle2.to_i %>°  </div>
+              <% end %></h4>
+              <p class="showp">Optimal: 180°</p>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-content">
+              <h3>Knee angle:</h3>
+             <h4> <% if (175..180).include?(assessment.angle3) %>
+                <div class="green"> <%= assessment.angle3.to_i %>° </div>
+              <% elsif (170..175).include?(assessment.angle3) %>
+                <div class="orange"><%= assessment.angle3.to_i %> °</div>
+              <% else %>
+                <div class="red"><%= assessment.angle3.to_i %>°</div>
+              <% end %> </h4>
+              <p class="showp">Optimal: 180°</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

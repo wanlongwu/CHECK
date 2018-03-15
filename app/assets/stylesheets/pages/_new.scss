@@ -28,6 +28,16 @@ video {
   flex-grow: 1;
 }
 
+.body-points-wraper{
+  display: flex;
+  justify-content:space-between;
+}
+
+.body-img{
+  height:300px;
+  margin-left: -87px;
+}
+
 #button1 {
   width: 100%;
   margin-bottom: 20px;
@@ -39,9 +49,18 @@ video {
   background-color: $check-teal;
 }
 
-ul {
+#submitForm {
+  margin-top: 50px;
+}
+
+.main-container ul {
   list-style-type: none;
   width: 300px;
+}
+
+.body-points li{
+  margin-top: 15px;
+  margin-left: -35px;
 }
 
 .countdown {
