@@ -47,7 +47,7 @@ function getPosition(event){
       storeAngle(angle, i);
      };
      if(i==5){
-      alert("Great job! Now press submit for result")
+      // alert("Great job! Now press submit for result")
       photoUrl = getImageData();
       // parsingArray.push([angleArray,photoUrl])
       storePhoto(photoUrl);
@@ -57,9 +57,9 @@ function getPosition(event){
 
 function drawCoordinates(x,y){
     var ctx = document.getElementById("myCanvas").getContext("2d");
-    ctx.fillStyle = "#ff2626"; // Red color
+    ctx.fillStyle = "#46fc3c"; // Red color
     ctx.beginPath();
-    ctx.arc(x, y, pointSize, 0, Math.PI * 2, true);
+    ctx.arc(x, y, 8, 0, Math.PI * 2, true);
     ctx.fill();
 };
 
@@ -69,6 +69,7 @@ const drawLine = (x1,y1,x2,y2) => {
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
+    ctx.lineWidth=3;
     ctx.stroke();
 };
 

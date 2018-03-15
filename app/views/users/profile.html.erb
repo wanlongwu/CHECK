@@ -2,8 +2,7 @@
 <% content_for :meta_description %>
 <% content_for :meta_image %>
 
-<body>
-  <div class="wrapper-main">
+  <!-- <div class="wrapper-main"> -->
   <div class="container-profile text-center">
     <div class="profile-dashboard">
       <div class="profile">
@@ -30,10 +29,10 @@
       </div>
       <div class="tips">
         <div class="tips-title">
-          <h3>Tip of the day</h3>
+          <h3>  </h3>
         </div>
         <div class="tips-content">
-          <p>"Every minute with a bad posture,sixty seconds pass"</p>
+          <p><%= @tip %></p>
         </div>
       </div>
       <div class="notification">
@@ -42,13 +41,13 @@
           <h3>Posture Buddy -- Your personal posture reminder</h3>
           <label for="pb-time">How often do you want to be reminded (in minutes)</label>
           <select class="form-control" id="pb-time-select">
-            <option>0.2</option>
+            <option>0.1</option>
             <option>15</option>
             <option>30</option>
             <option>45</option>
             <option>60</option>
           </select>
-          <button onclick="notifyMe()" class="form-control" class="bnt btn-primary">Start</button>
+          <button onclick="notifyMe()" class="form-control" class="btn btn-primary">Start</button>
         </div>
       </div>
       <div class="records">
@@ -103,14 +102,15 @@
           <h3>Exercises</h3>
         </div>
         <div class="exercises-content">
-          <p>人めの融大や当欲者コヲ除日権位トご再州ノチ体禁ヲオ考質セワトレ図党フッ意絡がくぶ都社ヘ宮護トぜさつ回37動ソル大裁防御裕じどへゆ。齢ぞレのだ言設自ラめだ北93敗レ寄謙う育止進テシニネ京務1外死ワオ他活ひゃけ分需アス再説ケ連観散ぱもは。治かろれ打分おろ経波サキセエ青元ぞらとぶ基整ン半裏ぱじこい校終え芸事先ノ封量ぞれしリ既今ムマユワ勢演んわり新氏藤省奈ぶよかび。</p>
+          <% current_user.assessments.last.programs.sample(3).each do |program| %>
+            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
     <div class="empty"></div>
   </div>
-  </div>
-  <div class="wrapper-middle-banner"></div>
-  <div class="wrapper-bottom-banner"></div>
-</body>
+  <!-- </div> -->
+  <!-- <div class="wrapper-middle-banner"></div> -->
+  <!-- <div class="wrapper-bottom-banner"></div> -->
