@@ -5,7 +5,7 @@
 <div class="container cam-big-contriner">
   <div class="row">
     <h2>Check Posture Cam</h2>
-    <h4 class="text-center">The check cam will evaluate your posture as viewed from the side, please read the instructions for better result.</h5>
+    <h4 class="text-center">The check cam will evaluate your posture as viewed from the side, please read the instructions for better results.</h5>
   </div>
   <div class="main-container">
     <div class="instructions-container">
@@ -13,9 +13,9 @@
       <ul id="instruction1">
         <li> <h5> 1. Adjust the camera angle </h5> </li>
         <li> <h5> 2. Click on the camera button </h5> </li>
-        <li> <h5> 3. Take 4 or 5 steps back </h5> </li>
-        <li> <h5> 4. Face sideway, Stand straight </h5> </li>
-        <li> <h5> 5. Photo will be taken 5 seconds after you pressed the camera button  </h5> </li>
+        <li> <h5> 3. Take a few steps back </h5> </li>
+        <li> <h5> 4. Face sideway, look straight </h5> </li>
+        <li> <h5> 5. Photo will be taken 5 seconds after you press the camera button  </h5> </li>
         <li> <button id="button1" onclick="snapshot(); hideVideo(); countdown(); hideInstructionOne(); appearInstructionTwo(); "> <%= image_tag "camera.png" %> </button> </li>
       </ul>
 
@@ -32,7 +32,7 @@
           <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
           <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
-          <li> <%= f.button :submit, "Submit for result", class: "btn", id: "submitForm" %> </li>
+          <li> <%= f.button :submit, "Submit for results", class: "btn", id: "submitForm" %> </li>
           <li><a href="http://res.cloudinary.com/db9cynf8x/image/upload/v1520921096/jgueaptphzbaavzl46g3.png" target="_blank">
           Click here for sample picture
         </a></li>
