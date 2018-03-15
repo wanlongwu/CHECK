@@ -32,11 +32,18 @@
 }
 .profile-dashboard > div {
   -webkit-transition: width 2s;
-  transition: width 2s;
+  transition:all 0.3s ease;
 }
 
 .profile-dashboard > div:hover{
-  box-shadow:0 0 10px white;
+  box-shadow:
+          // 1px 1px #4A8E9C,
+          // 2px 2px #4A8E9C,
+          3px 3px 3px #4A8E9C;
+  -webkit-transform: translateX(-3px);
+  -webkit-transform: translateY(-3px);
+  transform: translateX(-3px);
+  transform: translateY(-3px);
 }
 
 .profile {

@@ -26,17 +26,20 @@
         <%= f.input :angle2, as: :hidden %>
         <%= f.input :angle3, as: :hidden %>
         <%= f.input :photo, as: :hidden %>
-        <ul> <h5>Now please click on the following points in the photo. After clicking all 5 points, Submit for results</h5>
-          <li><h5> <%= image_tag "cursor.png" %> Ear </h5></li>
-          <li><h5> <%= image_tag "cursor.png" %> Shoulder </h5></li>
-          <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
-          <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
-          <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li>
-          <li> <%= f.button :submit, "Submit for results", class: "btn", id: "submitForm" %> </li>
-          <li><a href="http://res.cloudinary.com/db9cynf8x/image/upload/v1520921096/jgueaptphzbaavzl46g3.png" target="_blank">
-          Click here for sample picture
-        </a></li>
-        </ul>
+        <h5>Now please click on the following points in the photo. After clicking all 5 points, Submit for results</h5>
+        <div class="body-points-wraper">
+          <div class="body-points">
+            <ul>
+            <li><h5> <%= image_tag "cursor.png" %> Ear </h5></li>
+            <li><h5> <%= image_tag "cursor.png" %> Shoulder </h5></li>
+            <li><h5> <%= image_tag "cursor.png" %> Hip </h5></li>
+            <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
+            <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li></ul>
+          </div>
+          <%= cl_image_tag("samplep.jpg.gif", :class => "body-img") %>
+        </div>
+          <%= f.button :submit, "Submit for results", class: "btn", id: "submitForm" %>
+
 
       <% end %>
     </div>
