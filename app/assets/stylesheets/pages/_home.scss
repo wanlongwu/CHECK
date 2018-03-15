@@ -1,18 +1,19 @@
-h1 {
-  color: #b0eaff;
+.banner-content h1 {
+  color: $check-lightteal;
   font-size: 75px;
-  margin-bottom: 50px;
-  text-shadow: 3px 3px 3px grey;
+  text-shadow: 2px 2px 2px grey;
 }
 
 .h2-home {
   color: white;
-  padding-bottom: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  opacity: 0.6;
+  text-shadow: 1px 1px 1px white;
+  font-weight: lighter;
 }
 
 #banner {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(image-path("pimg2.jpg"));
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(image-path("pimg2.jpg"));
   height: 100vh;
   background-size: cover !important;
   display: flex;
@@ -23,9 +24,9 @@ h1 {
 }
 
 .banner-content {
-position: absolute;
-top: 300px;
-left: 150px;
+justify-content: center;
+text-align: center;
+align-items: center;
 }
 
 // .banner-content p {
@@ -56,20 +57,20 @@ left: 150px;
     // color: white;
 
     color: white;
-    border: 3px solid white;
+    background-color: $check-teal;
+    border: 3px solid $check-teal;
     padding: 15px 56px;
     border-radius: 50px;
-    opacity: 0.6;
+    opacity: 1;
   }
 
 
 
   .btn-home:hover {
     // background-color: $check-lightteal;
-    opacity: 1;
+    opacity: 0.7;
     text-decoration: none;
-    background-color: $check-teal;
-    border: 3px solid $check-teal;
+    border: 3px solid white;
     color: white;
   }
 
@@ -122,8 +123,12 @@ left: 150px;
 .home-steps {
   display: grid;
   grid-template-columns: 33.3% 1fr 1fr;
-  height: calc(300px);
+  height: calc(200px);
   padding: 30;
+  color: black;
+}
+
+.home-steps p {
   color: black;
 }
 
@@ -150,6 +155,4 @@ left: 150px;
   font-size: 27px;
   letter-spacing: 8px;
   text-transform: uppercase;
-
-
 }
