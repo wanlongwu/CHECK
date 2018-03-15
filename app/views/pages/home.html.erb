@@ -2,14 +2,15 @@
   <div id="banner">
     <div class="banner-content">
       <h1>CHECK</h1>
-      <h2 class="h2-home">Assess don't guess</h2>
-      <%= link_to "Assess", new_assessment_path, class: "btn"  %>
+
+      <h2 class="h2-home">Balanced mind, Balanced Body</h2>
+      <%= link_to "Start", new_assessment_path, class: "btn-home"  %>
     </div>
   </div>
 </div>
 
 <body class="pbody">
-  <section class="section section-light">
+  <section class="section section-dark">
     <h2>Why Posture Matters?</h2>
     <p>
       Sitting and standing with proper postural alignment will allow one to work more efficiently with less fatigue and strain on your body's ligaments and muscles.
@@ -23,21 +24,43 @@
       </span>
     </div>
   </div>
-  <section class="section section-dark">
-    <h2> CheckIT </h2>
-    <p>
+  <section class="section section-light">
+<!--     <h2> How It Works </h2> -->
+    <!-- <p>
       Being aware of good posture is the first step to breaking old poor postural habits and reducing stress and strain on your spine. CheckIT is a great feature that will remingd to sit up staright while you work.
-    </p>
+    </p> -->
+   <div class="home-container">
+     <div class="home-steps text-center">
+      <div class="step1">
+        <%= image_tag "photo-camera.png"%>
+        <h3>Assess your posture</h3>
+        <p>Quick screen and analysis</p>
+      </div>
+      <div class="step2">
+        <%= image_tag "analysis.png"%>
+        <h3>Monitor progress</h3>
+        <p>Body composition analysis along with measurment details</p>
+      </div>
+      <div class="step3">
+        <%= image_tag "chatting.png"%>
+        <h3>Get notifications</h3>
+        <p>Daily reminders of posture awareness
+      </div>
+
+     </div>
+   </div>
 
   </section>
 
-  <div class="pimg2">
-    <div class="ptext">
-      <span class="border">
+<section>
+    <div class="pimg2">
+     <div class="ptext">
+       <span class="border">
 
-      </span>
-    </div>
-  </div>
+       </span>
+     </div>
+   </div>
+</section>
 
 </body>
 
@@ -45,76 +68,3 @@
 
 
 
-<!-- <div class="wrapper-intro">
-  <div class="container-intro">
-    <div class="section-title">
-      <h2>Story Behind</h2>
-    </div>
-    <div class="story">
-      <div class="step-row">
-        <div class="step-item icon">
-          <%= image_tag "profile.png" %>
-        </div>
-        <div class="step-item content">
-          <p>Have you ever felt..</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-item icon">
-          <%= image_tag "profile.png" %>
-        <div class="step-item content">
-          <p>Don't Know How to?..</p>
-      </div>
-      <div class="step-row">
-        <div class="step-item icon">
-          <%= image_tag "profile.png" %>
-        <div class="step-item content">
-          <p>Is it Really Important though?</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrapper-quote">
-  <div class="quote">
-    <p>“A good stance and posture reflect a proper state of mind.”
-    -Morihei Ueshiba</p>
-  </div>
-</div>
-
-<div class="wrapper-features">
-    <div class="feature-one">
-      <div class="feature-number">
-        <h3>Feature One</h3>
-      </div>
-      <div class="feature-title">
-        <h2>Image Analysis</h2>
-      </div>
-      <div class="feature-details">
-        <p>Lorem Ipsum something that is amazing that everyone use but no one gets</p>
-      </div>
-    </div>
-    <div class="feature-two">
-      <div class="feature-number">
-        <h3>Feature Two</h3>
-      </div>
-      <div class="feature-title">
-        <h2>Image Analysis</h2>
-      </div>
-      <div class="feature-details">
-        <p>Lorem Ipsum something that is amazing that everyone use but no one gets</p>
-      </div>
-    </div>
-    <div class="feature-three">
-      <div class="feature-number">
-        <h3>Feature Three</h3>
-      </div>
-      <div class="feature-title">
-        <h2>Image Analysis</h2>
-      </div>
-      <div class="feature-details">
-        <p>Lorem Ipsum something that is amazing that everyone use but no one gets</p>
-      </div>
-    </div>
-</div>
-
- -->
