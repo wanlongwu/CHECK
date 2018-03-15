@@ -1,22 +1,37 @@
 <% content_for :meta_title, "current_user.first_name" %>
 <% content_for :meta_description %>
 <% content_for :meta_image %>
+ <%= javascript_include_tag "notification" %>
 
   <!-- <div class="wrapper-main"> -->
   <div class="container-profile text-center">
     <div class="profile-dashboard">
       <div class="profile">
-        <div class="profile-title">
-          <h3>Profile</h3>
+        <div class="profile-body">
+          <div class="profile-title">
+            <!-- <h3>Profile</h3> -->
+          </div>
+          <div class="profile-avatar">
+            <% unless current_user.facebook_picture_url == nil %>
+            <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
+            <% end %>
+            <h5>Welcome back  <%= current_user.first_name %>!</h5>
+          </div>
         </div>
-        <div class="profile-avatar">
-          <% unless current_user.facebook_picture_url == nil %>
-          <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
-          <% end %>
-          <h3><%= current_user.first_name %></h3>
+        <div class="form-group notification-body">
+            <h3>PostureIT </h3>
+            <h5>Your personal posture reminder</h5>
+            <label for="pb-time">How often do you want to be reminded (in minutes)</label>
+            <select class="form-control" id="pb-time-select">
+              <option>0.1</option>
+              <option>15</option>
+              <option>30</option>
+              <option>45</option>
+              <option>60</option>
+            </select>
+            <button onclick="notifyMe()" class="btn btn-primary">Start</button>
+          </div>
         </div>
-        <div class="profile-calendar"></div>
-      </div>
       <div class="photos">
         <div class="photos-title">
           <h3>Photos</h3>
@@ -29,30 +44,25 @@
       </div>
       <div class="tips">
         <div class="tips-title">
-          <h3>  </h3>
+          <h3> Posture Tip </h3>
         </div>
         <div class="tips-content">
           <p><%= @tip %></p>
         </div>
       </div>
-      <div class="notification">
-        <div class="form-group">
-          <%= javascript_include_tag "notification" %>
-          <h3>Posture Buddy -- Your personal posture reminder</h3>
-          <label for="pb-time">How often do you want to be reminded (in minutes)</label>
-          <select class="form-control" id="pb-time-select">
-            <option>0.1</option>
-            <option>15</option>
-            <option>30</option>
-            <option>45</option>
-            <option>60</option>
-          </select>
-          <button onclick="notifyMe()" class="form-control" class="btn btn-primary">Start</button>
+      <div class="exercises">
+        <div class="exercises-title">
+          <h3>Exercises</h3>
+        </div>
+        <div class="exercises-content">
+          <% current_user.assessments.last.programs.sample(3).each do |program| %>
+            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+          <% end %>
         </div>
       </div>
       <div class="records">
         <div class="records-title">
-          <h3>Records</h3>
+          <h3>Latest Records</h3>
         </div>
         <div class="records-content">
         <% assessment = @user.assessments.last %>
@@ -97,16 +107,6 @@
           </div>
         </div>
         </div>
-      <div class="exercises">
-        <div class="exercises-title">
-          <h3>Exercises</h3>
-        </div>
-        <div class="exercises-content">
-          <% current_user.assessments.last.programs.sample(3).each do |program| %>
-            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
-          <% end %>
-        </div>
-      </div>
     </div>
   </div>
     <div class="empty"></div>
