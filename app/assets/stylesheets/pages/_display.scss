@@ -23,18 +23,20 @@
 }
 
 .show-container {
-  padding-right: 200px;
-  padding-left: 200px;
+  padding-right: auto;
+  padding-left: auto;
   margin-right: auto;
   margin-left: auto;
 }
 
 .show-profile {
   display: grid;
-  grid-template-columns: 38% 1fr 1fr 1fr;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: 45% 1fr 1fr 1fr;
+  grid-template-rows: 55% 45%;
   height: calc(100vh - 70px);
+  width: 80%;
   padding: 30px;
+  margin:auto;
 }
 
 .show-profile .main {
@@ -51,7 +53,7 @@
 .description, .stat {
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  padding: 50px;
+  padding: auto;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -78,7 +80,7 @@
   width: 100%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border-radius: 4%;
+  border-radius: 10px;
 }
 
 /* Fonts and colors */
@@ -97,11 +99,11 @@
 
 .stat h3 {
   color: #30575f;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .stat h4 {
-  margin: 35px;
+  margin: auto 35px;
   font-size: 40px;
 }
 
@@ -128,7 +130,7 @@
 }
 
 .show-profile > div{
-  border-radius: 4%;
+  border-radius: 10px;
   background-color:white;
   -webkit-transition: width 5s; /* Safari */
   transition: width 5s;
