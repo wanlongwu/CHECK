@@ -6,7 +6,9 @@
 }
 
 .banner-content a{
-  font-size: 21px;
+  font-size: 18px;
+  padding: 11px 56px;
+  transition: all 0.3s ease;
 }
 
 .h3-home {
@@ -50,6 +52,8 @@ align-items: center;
   margin-bottom: 30px;
     color: white;
     background-color: $check-lightteal;
+      transition: all 0.3s ease;
+
   }
 
   .btn:hover {
