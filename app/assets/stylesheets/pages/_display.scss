@@ -15,6 +15,7 @@
   margin-bottom: 20px;
   color: white;
   background-color: $check-lightteal;
+  margin-top: 20px;
 }
 
 .btn-show:hover {
@@ -114,7 +115,7 @@
 
 .description h3 {
   color: rgba(0,0,0,0.9);
-  font-size: 21px;
+  font-size: 25px;
   color:$check-lightteal;
   font-weight: normal;
 }
@@ -122,6 +123,11 @@
 .description p {
   color: rgba(0,0,0,0.5);
   font-weight: 4px;
+  font-size: 20px;
+  margin: auto 50px;
+}
+
+.description-content a {
   font-size: 20px;
 }
 
