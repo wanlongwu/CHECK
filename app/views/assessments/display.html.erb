@@ -52,14 +52,14 @@
       </div>
       <div class="description">
         <div class="description-content">
-          <h3>Click and Go to CheckIT</h3>
+          <h3>HOW IS YOUR POSTURE?</h3>
           <p class="text-justify">
-            CheckIT is your personal posture buddy that provides: reminder, daily exercises based on the assessment, assessment history, and many more.
+            Your personal account offers great features tailored to your specific needs such as customizable reminders, recommended exercises, analytical improvements, and much more.
           </p>
           <% if user_signed_in? %>
             <%= link_to "Profile page", profile_path(current_user), class: "btn btn-show" %>
           <% else %>
-            <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
+            <%= link_to "Sign Up Now!", new_user_registration_path,class: "btn btn-show" %>
           <% end %>
         </div>
       </div>
