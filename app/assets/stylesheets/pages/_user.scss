@@ -23,7 +23,10 @@
 
 .profile-dashboard h3{
   color: #56AFC1;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
+
 .profile-dashboard > div{
   // border: solid #246E89;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -94,6 +97,11 @@
   grid-column: 2 / span 2;
   // border: solid;
 }
+
+.photos p {
+  margin-left: 20px;
+}
+
 .photos img {
   width:350px;
   height:250px;
@@ -103,6 +111,15 @@
 }
 .photos img:hover {
   box-shadow:0 0 10px grey;
+}
+
+.photos-img{
+  display: flex;
+  justify-content: center;
+}
+
+.photos-img img{
+  margin: 10px 10px 30px 10px;
 }
 
 .wrapper-tabs{
@@ -119,7 +136,7 @@
 .tips p{
   font-style: oblique;
   font-size: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
   padding:0px 22px;
   color:#30575f;
 }

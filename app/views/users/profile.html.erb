@@ -13,7 +13,9 @@
           </div>
           <div class="profile-avatar">
             <h3>Welcome back  <%= current_user.first_name %>!</h3>
-            <% unless current_user.facebook_picture_url == nil %>
+            <% if current_user.facebook_picture_url == nil %>
+            <%= image_tag "profile.png", class: "dashboard-avatar" %>
+            <% else %>
             <%= image_tag current_user.facebook_picture_url, class: "dashboard-avatar" %>
             <% end %>
           </div>
@@ -38,10 +40,28 @@
           <h3>Photos</h3>
         </div>
         <div class="photos-img">
-          <% @user.assessments.last(2).each do |assessment| %>
-          <%= cl_image_tag assessment.photo %>
+          <% a1 = @user.assessments.first %>
+          <% a2 = @user.assessments.last %>
+          <div class="a1">
+            <p>First Pic</p>
+          <%= cl_image_tag a1.photo %>
+          </div>
+          <% unless a1 == a2 %>
+            <div class="a2">
+              <p>Latest Pic</p>
+            <%= cl_image_tag a2.photo %>
+            </div>
           <% end %>
         </div>
+        <% if a1.angle1 < a2.angle1 %>
+         <h4> <%= "Your shoulder angle has improved by #{(a2.angle1-a1.angle1).to_i} degrees!" %> </h4>
+        <% end %>
+        <% if a1.angle2 < a2.angle2 %>
+         <h4> <%= "Your hip angle has improved by #{(a2.angle2-a1.angle2).to_i} degrees!" %> </h4>
+        <% end %>
+        <% if a1.angle3 < a2.angle3 %>
+         <h4> <%= "Your knee angle has improved by #{(a2.angle3-a1.angle3).to_i} degrees!" %> </h4>
+        <% end %>
       </div>
       <div class="tips">
         <div class="tips-title">
@@ -56,8 +76,10 @@
           <h3>Exercises</h3>
         </div>
         <div class="exercises-content">
-          <% current_user.assessments.last.programs.sample(3).each do |program| %>
-            <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+          <% if current_user.assessments.last != nil %>
+            <% current_user.assessments.last.programs.sample(3).each do |program| %>
+              <iframe class="embed-responsive-item youtube-box" src=  <%= program.exercise.content %> frameborder="0" allowfullscreen=""></iframe>
+            <% end %>
           <% end %>
         </div>
       </div>
@@ -70,6 +92,7 @@
           <div class="stat">
             <div class="stat-content">
              <h3>Shoulder angle: </h3>
+             <% if assessment != nil %>
               <h4><% if (175..180).include?(assessment.angle1) %>
                 <div class="green"> <%= assessment.angle1.to_i %>° </div>
               <% elsif (170..175).include?(assessment.angle1) %>
@@ -104,6 +127,7 @@
                 <div class="red"><%= assessment.angle3.to_i %>°</div>
               <% end %> </h4>
               <p class="showp">Optimal: 180°</p>
+              <% end %>
             </div>
           </div>
         </div>
