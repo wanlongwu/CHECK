@@ -28,6 +28,10 @@ video {
   flex-grow: 1;
 }
 
+#hidden > div.body-points-wraper > div.samplep > p{
+  margin:0 -68px 12.5px;
+}
+
 .body-points-wraper{
   display: flex;
   justify-content:space-between;
@@ -56,11 +60,19 @@ video {
 .main-container ul {
   list-style-type: none;
   width: 300px;
+  // list-style-position: outside;
+}
+
+ul li {
+   list-style-position: outside;
+   margin-left: 1em;
 }
 
 .body-points li{
   margin-top: 15px;
   margin-left: -35px;
+  // list-style-position: outside;
+
 }
 
 .countdown {

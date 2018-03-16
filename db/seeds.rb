@@ -31,7 +31,7 @@ end
     category:"neck"
   },
   {
-    name:"4 stretches that get rid of neck pain and give you better posture",
+    name:"4 Stretches for Easing Neck Pain and Improving Posture",
     content:"https://www.youtube.com/embed/NaShux69R1w?enablejsapi=1&amp;autoplay=0",
     category:"neck"
   },
@@ -41,12 +41,12 @@ end
     category:"neck"
   },
   {
-    name:"how to Get Rid of a Neck Hump",
+    name:"How to Get Rid of a Neck Hump",
     content:"https://www.youtube.com/embed/0OkB0xO_9kU?enablejsapi=1&amp;autoplay=0",
     category:"neck"
   },
   {
-    name: "5 Exercises To Fix Hunchback Posture",
+    name: "5 Exercises to Fix Hunchback Posture",
     content:"https://www.youtube.com/embed/wr1ONXcq3yM?enablejsapi=1&amp;autoplay=0",
     category:"back"
   },
@@ -56,7 +56,7 @@ end
     category:"back"
   },
   {
-    name:"How To Fix Uneven Hips",
+    name:"How to Fix Uneven Hips",
     content:"https://www.youtube.com/embed/lhbhay5_M-0?enablejsapi=1&amp;autoplay=0",
     category:"back"
   },
@@ -68,20 +68,19 @@ end
   ])
 
   Tip.create([{
-    content:"Back pain is one of the number one reasons for doctors visits and missed work days.
-"
+    content:"Back pain is one of the number one reasons for doctors visits and missed work days."
   },
   {
     content:"If you rest your elbows on the chair’s arms, make sure that the chair will keep your forearms parallel to the floor."
   },
   {
-    content:"When you’re sitting,  try to get up and walk around every 30 minutes, even if it’s for bathroom or water breaks."
+    content:"When you’re sitting, try to get up and walk around every 30 minutes, even if it’s for bathroom or water breaks."
   },
   {
     content:"Adjust your monitor so that the center of the screen is at eye level, an arm’s distance away, with the keyboard level with your forearms."
   },
   {
-    content:"When you’re sitting, keep both feet even and flat on the floor, with your knees at 90-degree angles"
+    content:"When you’re sitting, keep both feet even and flat on the floor, with your knees at 90-degree angles."
   },
   {
     content:"Good posture improves sleep patterns, and we all know what a difference sleep makes to your mood!"
@@ -96,16 +95,16 @@ end
     content:"You may want to purchase a laptop board if you do a lot of couch computing."
   },
   {
-    content:"Instead of emailing your colleague, drop by his desk and talk to him in person."
+    content:"Instead of emailing your colleague, drop by his/her desk and talk to him/her in person."
   },
   {
     content:"The head in forward posture can add up to 30 pounds of abnormal leverage on the spine."
   },
    {
-    content:"Running’s good for improving posture since it naturally promotes straighter spine."
+    content:"Running is good for improving posture since it naturally promotes a straighter spine."
   },
  {
-    content:"Even if it’s not true, poor posture may automatically tells people that you lack confidence."
+    content:"Even if it’s not true, poor posture may automatically tell people that you lack confidence."
   },
   ])
 

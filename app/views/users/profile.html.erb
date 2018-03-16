@@ -53,15 +53,6 @@
             </div>
           <% end %>
         </div>
-        <% if a1.angle1 < a2.angle1 %>
-         <h4> <%= "Your shoulder angle has improved by #{(a2.angle1-a1.angle1).to_i} degrees!" %> </h4>
-        <% end %>
-        <% if a1.angle2 < a2.angle2 %>
-         <h4> <%= "Your hip angle has improved by #{(a2.angle2-a1.angle2).to_i} degrees!" %> </h4>
-        <% end %>
-        <% if a1.angle3 < a2.angle3 %>
-         <h4> <%= "Your knee angle has improved by #{(a2.angle3-a1.angle3).to_i} degrees!" %> </h4>
-        <% end %>
       </div>
       <div class="tips">
         <div class="tips-title">

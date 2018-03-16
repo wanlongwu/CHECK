@@ -10,14 +10,14 @@
   <div class="main-container">
     <div class="instructions-container">
       <h3 class="text-center">Instructions:</h3>
-      <ul id="instruction1">
-        <li> <h5> 1. Adjust the camera angle </h5> </li>
-        <li> <h5> 2. Click on the camera button </h5> </li>
-        <li> <h5> 3. Take a few steps back </h5> </li>
-        <li> <h5> 4. Face sideway, look straight </h5> </li>
-        <li> <h5> 5. Photo will be taken 5 seconds after you press the camera button  </h5> </li>
-        <li> <button id="button1" onclick="snapshot(); hideVideo(); countdown(); hideInstructionOne(); appearInstructionTwo(); "> <%= image_tag "camera.png" %> </button> </li>
-      </ul>
+      <ol id="instruction1">
+        <li> <h5> Adjust the camera angle to 90° </h5> </li>
+        <li> <h5> Click on the camera button </h5> </li>
+        <li> <h5> Take 4-5 steps back for a head-to-toe view </h5> </li>
+        <li> <h5> Face sideways, look straight ahead </h5> </li>
+        <li style="list-style-type: none"> <h5> (Photo will be taken 5 seconds after you press the camera button) </h5> </li>
+        <li style="list-style-type: none"> <button id="button1" onclick="snapshot(); hideVideo(); countdown(); hideInstructionOne(); appearInstructionTwo(); "> <%= image_tag "camera.png" %> </button> </li>
+      </ol>
 
       <div class="countdown" id="countdown"></div>
 
@@ -26,7 +26,8 @@
         <%= f.input :angle2, as: :hidden %>
         <%= f.input :angle3, as: :hidden %>
         <%= f.input :photo, as: :hidden %>
-        <h5>Now please click on the following points in the photo. After clicking all 5 points, Submit for results</h5>
+        <h5>1. Using the example as a guide, please click on the following listed points in your photo </h5>
+        <h5>2. After clicking all 5 points, press "Submit for results" </h5>
         <div class="body-points-wraper">
           <div class="body-points">
             <ul>
@@ -36,7 +37,10 @@
             <li><h5> <%= image_tag "cursor.png" %> Knee </h5></li>
             <li><h5> <%= image_tag "cursor.png" %> Ankle </h5></li></ul>
           </div>
+          <div class="samplep">
           <%= cl_image_tag("samplep.jpg.gif", :class => "body-img") %>
+          <p>Example</p>
+          </div>
         </div>
           <%= f.button :submit, "Submit for results", class: "btn", id: "submitForm" %>
 
