@@ -1,9 +1,7 @@
-<% content_for :meta_title, "Your results" %>
+<% content_for :meta_title, "your results" %>
 <% content_for :meta_description %>
 <% content_for :meta_image %>
 
-<div class="result-wrapper">
-<h2 class="text-center">Results</h2>
 <div class="wrapper-flex">
   <div class="show-container">
     <div class="show-profile text-center">
@@ -23,58 +21,6 @@
           <p class="showp">Optimal: 180°</p>
           <%= image_tag "human-neck.png" %>
         </div>
-        <div class="stat">
-          <div class="stat-content">
-           <h3>Shoulder angle: </h3>
-            <h4><% if (175..180).include?(@assessment.angle1) %>
-              <div class="green"> <%= @assessment.angle1.to_i %>° </div>
-            <% elsif (170..175).include?(@assessment.angle1) %>
-              <div class="orange"><%= @assessment.angle1.to_i %>°  </div>
-            <% else %>
-              <div class="red"><%= @assessment.angle1.to_i %>°  </div>
-            <% end %></h4>
-            <p class="showp">Optimal: 180°</p>
-          </div>
-        </div>
-        <div class="stat">
-          <div class="stat-content">
-            <h3>Hip angle: </h3>
-            <h4><% if (175..180).include?(@assessment.angle2) %>
-              <div class="green"> <%= @assessment.angle2.to_i %>° </div>
-            <% elsif (170..175).include?(@assessment.angle2) %>
-              <div class="orange"><%= @assessment.angle2.to_i %>°  </div>
-            <% else %>
-              <div class="red"><%= @assessment.angle2.to_i %>°  </div>
-            <% end %></h4>
-            <p class="showp">Optimal: 180°</p>
-            </div>
-          </div>
-        <div class="stat">
-          <div class="stat-content">
-            <h3>Knee angle:</h3>
-           <h4> <% if (175..180).include?(@assessment.angle3) %>
-              <div class="green"> <%= @assessment.angle3.to_i %>° </div>
-            <% elsif (170..175).include?(@assessment.angle3) %>
-              <div class="orange"><%= @assessment.angle3.to_i %> °</div>
-            <% else %>
-              <div class="red"><%= @assessment.angle3.to_i %>°</div>
-            <% end %> </h4>
-            <p class="showp">Optimal: 180°</p>
-          </div>
-        </div>
-        <div class="description">
-          <div class="description-content">
-            <h3>Click and Go to PostureIt</h3>
-            <p class="text-justify">
-              PostureIt is your personal posture buddy that provides: reminder, daily exercises based on the assessment, assessment history, and many more.
-            </p>
-            <% if user_signed_in? %>
-              <%= link_to "Profile page", profile_path(current_user), class: "btn btn-show" %>
-            <% else %>
-              <%= link_to "Create an account for more", new_user_registration_path,class: "btn btn-show" %>
-            <% end %>
-          </div>
-
       </div>
       <div class="stat">
         <div class="stat-content">
@@ -118,7 +64,5 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
 </div>
