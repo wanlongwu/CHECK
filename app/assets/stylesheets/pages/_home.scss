@@ -1,15 +1,18 @@
 .banner-content h1 {
   color: $check-lightteal;
-  font-size: 75px;
-  text-shadow: 2px 2px 2px grey;
+  font-size: 85px;
+  // margin-bottom: 96px;
+  text-shadow: 2px 2px 2px $check-shadow;
 }
 
-.h2-home {
+.h3-home {
   color: white;
-  margin-bottom: 50px;
-  opacity: 0.6;
+  opacity: 0.7;
   text-shadow: 1px 1px 1px white;
   font-weight: lighter;
+  font-size: 30px;
+  margin-bottom: 45px;
+  // margin-top: 70px;
 }
 
 #banner {
@@ -27,6 +30,7 @@
 justify-content: center;
 text-align: center;
 align-items: center;
+// margin-bottom: 40px;
 }
 
 // .banner-content p {
