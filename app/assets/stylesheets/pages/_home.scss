@@ -1,18 +1,22 @@
-h1 {
-  color: #b0eaff;
-  font-size: 75px;
-  margin-bottom: 50px;
-  text-shadow: 3px 3px 3px grey;
+.banner-content h1 {
+  color: $check-lightteal;
+  font-size: 85px;
+  // margin-bottom: 96px;
+  text-shadow: 2px 2px 2px $check-shadow;
 }
 
-.h2-home {
+.h3-home {
   color: white;
-  padding-bottom: 15px;
-  margin-bottom: 30px;
+  opacity: 0.7;
+  text-shadow: 1px 1px 1px white;
+  font-weight: lighter;
+  font-size: 30px;
+  margin-bottom: 45px;
+  // margin-top: 70px;
 }
 
 #banner {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(image-path("pimg2.jpg"));
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(image-path("pimg2.jpg"));
   height: 100vh;
   background-size: cover !important;
   display: flex;
@@ -23,9 +27,10 @@ h1 {
 }
 
 .banner-content {
-position: absolute;
-top: 300px;
-left: 150px;
+justify-content: center;
+text-align: center;
+align-items: center;
+// margin-bottom: 40px;
 }
 
 // .banner-content p {
@@ -56,20 +61,20 @@ left: 150px;
     // color: white;
 
     color: white;
-    border: 3px solid white;
+    background-color: $check-teal;
+    border: 3px solid $check-teal;
     padding: 15px 56px;
     border-radius: 50px;
-    opacity: 0.6;
+    opacity: 1;
   }
 
 
 
-  .btn-home:hover {
+.btn-home:hover {
     // background-color: $check-lightteal;
-    opacity: 1;
+    opacity: 0.7;
     text-decoration: none;
-    background-color: $check-teal;
-    border: 3px solid $check-teal;
+    border: 3px solid white;
     color: white;
   }
 
@@ -122,10 +127,34 @@ left: 150px;
 .home-steps {
   display: grid;
   grid-template-columns: 33.3% 1fr 1fr;
-  height: calc(300px);
+  height: calc(200px);
   padding: 30;
   color: black;
 }
+
+.home-steps p {
+  color: #30575f;
+  margin: 0px;
+ font-size: 16px;
+}
+
+.call-to-action {
+  color: white;
+    background-color: $check-lightteal;
+    border: 3px solid $check-lightteal;
+    padding: 8px 69px;
+    border-radius: 50px;
+    opacity: 1;
+
+}
+
+.call-to-action:hover {
+    background-color: $check-teal;
+    text-decoration: none;
+    border: 3px solid $check-teal;
+    color: white;
+}
+
 
 .section {
   text-align: center;
@@ -142,6 +171,10 @@ left: 150px;
   color: white;
 }
 
+.section-dark p {
+  font-size: 18px;
+}
+
 .ptext {
   position: absolute;
   top: 50%;
@@ -150,6 +183,9 @@ left: 150px;
   font-size: 27px;
   letter-spacing: 8px;
   text-transform: uppercase;
+}
 
-
+.step2 p {
+    width: 401px;
+    margin-bottom: 30px;
 }

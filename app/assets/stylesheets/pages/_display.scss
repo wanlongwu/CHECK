@@ -23,8 +23,8 @@
 }
 
 .show-container {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 200px;
+  padding-left: 200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -75,7 +75,7 @@
 
 
 .show-main img {
-  width: auto;
+  width: 100%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 4%;
@@ -96,7 +96,7 @@
 }
 
 .stat h3 {
-  color: black;
+  color: #30575f;
   font-size: 25px;
 }
 
